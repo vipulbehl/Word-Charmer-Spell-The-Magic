@@ -1,0 +1,306 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Resources/Themes/Dimbo Regular24.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/short_arrow_right.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/PlayScene/Tutorial.gd" type="Script" id=4]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/short_arrow_right.png" type="Texture" id=5]
+[ext_resource path="res://Resources/UI Elements/Window/Dialog_box.png" type="Texture" id=6]
+[ext_resource path="res://Resources/UI Elements/Buttons/indicator_current_tank.png" type="Texture" id=7]
+
+[sub_resource type="Animation" id=1]
+resource_name = "IDLE"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.15, 0.15 ), Vector2( 0.16, 0.16 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "attack_animation"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AttackButton:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "grid_animation"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("GridButton:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "search_animation"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("SearchButton:rect_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.2, 1.2 ), Vector2( 1.35, 1.35 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "selected_animation"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("SelectedButton:rect_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "shuffle_animation"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("ShuffleButton:rect_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "wizard_animation"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("WizardButton:rect_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ) ]
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DialogBox" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="DialogBox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.192157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="DialogBox"]
+anchor_left = 0.513
+anchor_top = 0.402
+anchor_right = 0.513
+anchor_bottom = 0.402
+margin_left = -306.78
+margin_top = -77.7051
+margin_right = 306.22
+margin_bottom = 77.2949
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogBox"]
+anchor_left = 0.506
+anchor_top = 0.416
+anchor_right = 0.506
+anchor_bottom = 0.416
+margin_left = -272.144
+margin_top = -65.6
+margin_right = 272.856
+margin_bottom = 16.4
+rect_clip_content = false
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 0.382813, 0.329613, 0.215332, 1 )
+bbcode_enabled = true
+bbcode_text = "This is just some long text so that I can see the appear effect in action"
+text = "This is just some long text so that I can see the appear effect in action"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="next-indicator" type="TextureButton" parent="DialogBox"]
+anchor_left = 0.5
+anchor_top = 0.416
+anchor_right = 0.5
+anchor_bottom = 0.416
+margin_left = 218.253
+margin_top = -4.15221
+margin_right = 534.253
+margin_bottom = 235.848
+rect_scale = Vector2( 0.15, 0.15 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogBox/next-indicator"]
+autoplay = "IDLE"
+anims/IDLE = SubResource( 1 )
+
+[node name="Tween" type="Tween" parent="DialogBox"]
+
+[node name="GridButton" type="TextureButton" parent="DialogBox"]
+anchor_left = 0.52
+anchor_top = 0.443
+anchor_right = 0.52
+anchor_bottom = 0.443
+margin_left = -25.8985
+margin_top = 39.6476
+margin_right = 28.1015
+margin_bottom = 79.6476
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AttackButton" type="TextureButton" parent="DialogBox"]
+anchor_left = 0.52
+anchor_top = 0.443
+anchor_right = 0.52
+anchor_bottom = 0.443
+margin_left = 262.102
+margin_top = 37.6476
+margin_right = 316.102
+margin_bottom = 77.6476
+rect_rotation = -42.7
+rect_pivot_offset = Vector2( 27, 20 )
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectedButton" type="TextureButton" parent="DialogBox"]
+anchor_left = 0.52
+anchor_top = 0.443
+anchor_right = 0.52
+anchor_bottom = 0.443
+margin_left = 32.8715
+margin_top = -102.305
+margin_right = 86.8715
+margin_bottom = -62.3051
+rect_rotation = 180.0
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShuffleButton" type="TextureButton" parent="DialogBox"]
+anchor_left = 0.52
+anchor_top = 0.443
+anchor_right = 0.52
+anchor_bottom = 0.443
+margin_left = -334.948
+margin_top = 38.6474
+margin_right = -280.948
+margin_bottom = 78.6474
+rect_rotation = 30.0
+rect_pivot_offset = Vector2( 27, 20 )
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SearchButton" type="TextureButton" parent="DialogBox"]
+anchor_left = 0.52
+anchor_top = 0.443
+anchor_right = 0.52
+anchor_bottom = 0.443
+margin_left = -379.948
+margin_top = 194.647
+margin_right = -325.948
+margin_bottom = 234.647
+rect_rotation = 38.8
+rect_scale = Vector2( 1.2, 1.2 )
+rect_pivot_offset = Vector2( 27, 20 )
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WizardButton" type="TextureButton" parent="DialogBox"]
+anchor_left = 0.52
+anchor_top = 0.443
+anchor_right = 0.52
+anchor_bottom = 0.443
+margin_left = -311.948
+margin_top = -63.3526
+margin_right = -257.948
+margin_bottom = -23.3526
+rect_rotation = 90.0
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrowAnimation" type="AnimationPlayer" parent="DialogBox"]
+autoplay = "search_animation"
+anims/attack_animation = SubResource( 3 )
+anims/grid_animation = SubResource( 2 )
+anims/search_animation = SubResource( 7 )
+anims/selected_animation = SubResource( 4 )
+anims/shuffle_animation = SubResource( 5 )
+anims/wizard_animation = SubResource( 6 )
+
+[connection signal="button_up" from="DialogBox/next-indicator" to="DialogBox" method="_on_nextindicator_button_up"]
+[connection signal="tween_completed" from="DialogBox/Tween" to="DialogBox" method="_on_Tween_tween_completed"]

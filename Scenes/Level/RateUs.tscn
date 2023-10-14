@@ -1,0 +1,209 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Resources/UI Elements/Window/rate_us_window.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_game_over_heading.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Resources/UI Elements/Buttons/rate_us.png" type="Texture" id=3]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/close_red.png" type="Texture" id=4]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/close_red.png" type="Texture" id=5]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_inside_text.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Scripts/LevelScene/RateUs.gd" type="Script" id=7]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/ok_green.png" type="Texture" id=8]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/ok_green.png" type="Texture" id=9]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 9
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -202.275
+margin_top = -199.167
+margin_right = 1131.73
+margin_bottom = 1058.83
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -82.0
+margin_top = -195.0
+margin_right = 84.0
+margin_bottom = -155.0
+custom_fonts/font = ExtResource( 2 )
+text = "RATE US"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="CanvasLayer/Control"]
+anchor_left = 0.498
+anchor_top = 0.5
+anchor_right = 0.498
+anchor_bottom = 0.5
+margin_left = -115.291
+margin_top = -19.0
+margin_right = 115.709
+margin_bottom = 108.0
+custom_fonts/font = ExtResource( 6 )
+text = "Liked the Game?
+
+Rate us on the play store and get 1000 coins"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RateButton" type="TextureButton" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 83.3384
+margin_top = 108.607
+margin_right = 347.338
+margin_bottom = 376.607
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CancelButton" type="TextureButton" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -176.955
+margin_top = 140.497
+margin_right = 1.04498
+margin_bottom = 320.497
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control_1" type="Control" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -470.378
+margin_top = -280.973
+margin_right = -430.378
+margin_bottom = -240.973
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rate_us" type="Sprite" parent="CanvasLayer/Control/Control_1"]
+position = Vector2( 365.855, 155.594 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 3 )
+
+[node name="Control2" type="Control" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -470.378
+margin_top = -280.973
+margin_right = -430.378
+margin_bottom = -240.973
+
+[node name="rate_us2" type="Sprite" parent="CanvasLayer/Control/Control2"]
+position = Vector2( 415.477, 172.261 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 3 )
+
+[node name="Control3" type="Control" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -470.378
+margin_top = -280.973
+margin_right = -430.378
+margin_bottom = -240.973
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rate_us3" type="Sprite" parent="CanvasLayer/Control/Control3"]
+position = Vector2( 468.211, 189.723 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 3 )
+
+[node name="Control4" type="Control" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -470.378
+margin_top = -280.973
+margin_right = -430.378
+margin_bottom = -240.973
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rate_us4" type="Sprite" parent="CanvasLayer/Control/Control4"]
+position = Vector2( 520.626, 173.849 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 3 )
+
+[node name="Control5" type="Control" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -470.378
+margin_top = -280.973
+margin_right = -430.378
+margin_bottom = -240.973
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rate_us5" type="Sprite" parent="CanvasLayer/Control/Control5"]
+position = Vector2( 571.423, 156.387 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 3 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 8
+
+[node name="BackgroundTint" type="ColorRect" parent="CanvasLayer2"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.552941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="CanvasLayer/Control/RateButton" to="." method="_on_RateButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/Control/CancelButton" to="." method="_on_CancelButton_button_up"]

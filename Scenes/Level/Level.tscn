@@ -1,0 +1,458 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Scripts/LevelScene/Level.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Sprites/Background/menu.png" type="Texture" id=2]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/arrow_left.png" type="Texture" id=3]
+[ext_resource path="res://Resources/UI Elements/Window/ribbon.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Fonts/cloudy_level_selection_number.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/arrow_right.png" type="Texture" id=6]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/arrow_right.png" type="Texture" id=7]
+[ext_resource path="res://Resources/Sprites/Sounds/normal_button_click.wav" type="AudioStream" id=8]
+[ext_resource path="res://Resources/UI Elements/Buttons/Chest_01_Locked.png" type="Texture" id=9]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/back_yellow.png" type="Texture" id=10]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/back_yellow.png" type="Texture" id=11]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/store_blue.png" type="Texture" id=12]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/store_blue.png" type="Texture" id=13]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/arrow_left.png" type="Texture" id=14]
+[ext_resource path="res://Resources/UI Elements/Buttons/Chest_01_Unlocked.png" type="Texture" id=15]
+
+[sub_resource type="Animation" id=1]
+resource_name = "GridContainer1"
+tracks/0/type = "value"
+tracks/0/path = NodePath("GridContainer1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("GridContainer1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "GridContainer2"
+tracks/0/type = "value"
+tracks/0/path = NodePath("GridContainer2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("GridContainer2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "GridContainer3"
+tracks/0/type = "value"
+tracks/0/path = NodePath("GridContainer3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("GridContainer3:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "GridContainer4"
+tracks/0/type = "value"
+tracks/0/path = NodePath("GridContainer4:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("GridContainer4:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "GridContainer5"
+tracks/0/type = "value"
+tracks/0/path = NodePath("GridContainer5:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("GridContainer5:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "GridContainer6"
+tracks/0/type = "value"
+tracks/0/path = NodePath("GridContainer6:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("GridContainer6:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "show_chest"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ), Vector2( 1, 1 ) ]
+}
+
+[node name="Node" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="Level" type="Control" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer1" type="GridContainer" parent="CanvasLayer/Level"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -205.82
+margin_top = -178.463
+margin_right = 441.18
+margin_bottom = 224.536
+custom_constants/vseparation = 30
+custom_constants/hseparation = 60
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer2" type="GridContainer" parent="CanvasLayer/Level"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -205.82
+margin_top = -178.463
+margin_right = 441.18
+margin_bottom = 224.536
+custom_constants/vseparation = 30
+custom_constants/hseparation = 60
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer3" type="GridContainer" parent="CanvasLayer/Level"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -205.82
+margin_top = -178.463
+margin_right = 441.18
+margin_bottom = 224.536
+custom_constants/vseparation = 30
+custom_constants/hseparation = 60
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer4" type="GridContainer" parent="CanvasLayer/Level"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -205.82
+margin_top = -178.463
+margin_right = 441.18
+margin_bottom = 224.536
+custom_constants/vseparation = 30
+custom_constants/hseparation = 60
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer5" type="GridContainer" parent="CanvasLayer/Level"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -205.82
+margin_top = -178.463
+margin_right = 441.18
+margin_bottom = 224.536
+custom_constants/vseparation = 30
+custom_constants/hseparation = 60
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer6" type="GridContainer" parent="CanvasLayer/Level"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -205.82
+margin_top = -178.463
+margin_right = 441.18
+margin_bottom = 224.536
+custom_constants/vseparation = 30
+custom_constants/hseparation = 60
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PreviousLevelList" type="TextureButton" parent="CanvasLayer/Level"]
+anchor_left = 0.048
+anchor_top = 0.477
+anchor_right = 0.048
+anchor_bottom = 0.477
+margin_left = -43.152
+margin_top = -63.2
+margin_right = 42.848
+margin_bottom = 62.8
+rect_pivot_offset = Vector2( 43, 63 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextLevelList" type="TextureButton" parent="CanvasLayer/Level"]
+anchor_left = 0.945
+anchor_top = 0.477
+anchor_right = 0.945
+anchor_bottom = 0.477
+margin_left = -42.6801
+margin_top = -64.8818
+margin_right = 43.3199
+margin_bottom = 61.1182
+rect_pivot_offset = Vector2( 43, 63 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="TextureButton" parent="CanvasLayer/Level"]
+anchor_left = 0.044
+anchor_top = 0.069
+anchor_right = 0.044
+anchor_bottom = 0.069
+margin_left = -35.8821
+margin_top = -36.0402
+margin_right = 142.118
+margin_bottom = 143.96
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StoreButton" type="TextureButton" parent="CanvasLayer/Level"]
+anchor_left = 0.93
+anchor_top = 0.889
+anchor_right = 0.93
+anchor_bottom = 0.889
+margin_left = -53.32
+margin_top = -53.4
+margin_right = 124.68
+margin_bottom = 126.6
+rect_scale = Vector2( 0.6, 0.6 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Level"]
+anims/GridContainer1 = SubResource( 1 )
+anims/GridContainer2 = SubResource( 2 )
+anims/GridContainer3 = SubResource( 3 )
+anims/GridContainer4 = SubResource( 4 )
+anims/GridContainer5 = SubResource( 5 )
+anims/GridContainer6 = SubResource( 6 )
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Level"]
+anchor_left = 0.516
+anchor_top = 0.083
+anchor_right = 0.516
+anchor_bottom = 0.083
+margin_left = -20.4578
+margin_top = -19.8339
+margin_right = 19.5422
+margin_bottom = 20.1661
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ribbon" type="Sprite" parent="CanvasLayer/Level/CenterContainer"]
+position = Vector2( 32.5108, 27.1564 )
+scale = Vector2( 0.329624, 0.420368 )
+texture = ExtResource( 4 )
+
+[node name="LevelSelectHeading" type="Label" parent="CanvasLayer/Level"]
+anchor_left = 0.538
+anchor_top = 0.092
+anchor_right = 0.538
+anchor_bottom = 0.092
+margin_left = -174.422
+margin_top = -31.901
+margin_right = 154.578
+margin_bottom = 19.099
+custom_fonts/font = ExtResource( 5 )
+text = "Level Select"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DefaultButtonClick" type="AudioStreamPlayer" parent="CanvasLayer/Level"]
+stream = ExtResource( 8 )
+
+[node name="RewardChest" type="TextureButton" parent="CanvasLayer/Level"]
+visible = false
+anchor_left = 0.06
+anchor_top = 0.892
+anchor_right = 0.06
+anchor_bottom = 0.892
+margin_left = -47.4502
+margin_top = -77.1763
+margin_right = 80.5498
+margin_bottom = 50.8237
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RewardChestShowAnimation" type="AnimationPlayer" parent="CanvasLayer/Level/RewardChest"]
+autoplay = "show_chest"
+anims/show_chest = SubResource( 7 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="Background" type="TextureRect" parent="CanvasLayer2"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1024.0
+margin_bottom = 936.0
+rect_scale = Vector2( 0.6, 0.5 )
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="CanvasLayer/Level/PreviousLevelList" to="CanvasLayer/Level" method="_on_PreviousLevelList_button_up"]
+[connection signal="button_up" from="CanvasLayer/Level/NextLevelList" to="CanvasLayer/Level" method="_on_NextLevelList_button_up"]
+[connection signal="button_up" from="CanvasLayer/Level/BackButton" to="CanvasLayer/Level" method="_on_BackButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/Level/StoreButton" to="CanvasLayer/Level" method="_on_StoreButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/Level/RewardChest" to="CanvasLayer/Level" method="_on_RewardChest_button_up"]

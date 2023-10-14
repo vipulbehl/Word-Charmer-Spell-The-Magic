@@ -1,0 +1,148 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_game_over_heading.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_heading.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Resources/UI Elements/GridButtons/healTile.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_inside_text.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/ok_green.png" type="Texture" id=5]
+[ext_resource path="res://Resources/UI Elements/Window/window_big_separator.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/PlayScene/TileUnlock.gd" type="Script" id=7]
+[ext_resource path="res://Resources/UI Elements/Window/window_big.png" type="Texture" id=8]
+[ext_resource path="res://Resources/Sprites/Sounds/normal_button_click.wav" type="AudioStream" id=9]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/ok_green.png" type="Texture" id=10]
+
+[node name="Node2D" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 7 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 6
+
+[node name="UnlockWindow" type="Control" parent="CanvasLayer"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -208.583
+margin_top = -148.498
+margin_right = 280.417
+margin_bottom = 129.502
+grow_horizontal = 2
+grow_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/UnlockWindow"]
+anchor_left = 0.639
+anchor_top = 0.5
+anchor_right = 0.639
+anchor_bottom = 0.5
+margin_left = -433.888
+margin_top = -233.837
+margin_right = 286.112
+margin_bottom = 166.163
+rect_scale = Vector2( 1, 1.2 )
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileName" type="Label" parent="CanvasLayer/UnlockWindow"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -102.233
+margin_top = -41.9289
+margin_right = 106.767
+margin_bottom = 7.07111
+grow_horizontal = 2
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Paralyze Tile"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Heading" type="Label" parent="CanvasLayer/UnlockWindow"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -143.912
+margin_top = -211.873
+margin_right = 137.088
+margin_bottom = -171.873
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 1 )
+text = "Tile Unlocked"
+
+[node name="TileImage" type="TextureRect" parent="CanvasLayer/UnlockWindow"]
+anchor_left = 0.5
+anchor_top = 0.374
+anchor_right = 0.5
+anchor_bottom = 0.374
+margin_left = -44.731
+margin_top = -98.211
+margin_right = 165.269
+margin_bottom = 111.789
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileDescription" type="Label" parent="CanvasLayer/UnlockWindow"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -256.5
+margin_top = 37.0
+margin_right = 233.5
+margin_bottom = 205.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- Heals the wizard's health by 20 HP
+- Spawns on creating 5+ length words
+- Can be upgraded from the Shop"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="window_big_separator" type="Sprite" parent="CanvasLayer/UnlockWindow/TileDescription"]
+position = Vector2( 256.251, -4 )
+scale = Vector2( 0.362638, 0.5 )
+texture = ExtResource( 6 )
+
+[node name="OK" type="TextureButton" parent="CanvasLayer/UnlockWindow"]
+anchor_left = 0.541
+anchor_top = 0.5
+anchor_right = 0.541
+anchor_bottom = 0.5
+margin_left = 194.737
+margin_top = 171.836
+margin_right = 458.737
+margin_bottom = 439.836
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NormalButtonClick" type="AudioStreamPlayer" parent="CanvasLayer/UnlockWindow"]
+stream = ExtResource( 9 )
+
+[connection signal="button_up" from="CanvasLayer/UnlockWindow/OK" to="." method="_on_OK_button_up"]

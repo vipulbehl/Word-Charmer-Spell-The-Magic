@@ -1,0 +1,129 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_heading.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_inside_text.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Resources/UI Elements/Window/window_defeat.png" type="Texture" id=3]
+[ext_resource path="res://Resources/UI Elements/Buttons/Cartoon RPG UI_Game Icon - Coin.png" type="Texture" id=4]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/ok_green.png" type="Texture" id=5]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/ok_green.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/HomeScene/DailyCoins.gd" type="Script" id=7]
+[ext_resource path="res://Resources/Sprites/Sounds/chest_unlock.wav" type="AudioStream" id=8]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 7
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+anchor_left = 0.487
+anchor_top = 0.451
+anchor_right = 0.487
+anchor_bottom = 0.451
+margin_left = -200.424
+margin_top = -140.345
+margin_right = 1133.58
+margin_bottom = 795.655
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+anchor_left = 0.491
+anchor_top = 0.431
+anchor_right = 0.491
+anchor_bottom = 0.431
+margin_left = -108.692
+margin_top = -118.488
+margin_right = 108.308
+margin_bottom = -87.4878
+custom_fonts/font = ExtResource( 1 )
+text = "Daily Reward"
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.427
+anchor_right = 0.5
+anchor_bottom = 0.427
+margin_left = -89.9941
+margin_top = -57.5751
+margin_right = 38.006
+margin_bottom = 70.4249
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.415
+anchor_right = 0.5
+anchor_bottom = 0.415
+margin_left = -41.074
+margin_top = -40.0507
+margin_right = 10.926
+margin_bottom = -17.0507
+custom_fonts/font = ExtResource( 2 )
+text = "1000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.424
+anchor_right = 0.5
+anchor_bottom = 0.424
+margin_left = 77.8466
+margin_top = 79.7671
+margin_right = 341.847
+margin_bottom = 347.767
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="CanvasLayer/Control"]
+anchor_left = 0.49
+anchor_top = 0.443
+anchor_right = 0.49
+anchor_bottom = 0.443
+margin_left = -135.76
+margin_top = -16.8
+margin_right = 134.24
+margin_bottom = 68.2
+custom_fonts/font = ExtResource( 2 )
+text = "Come back tomorrow for more rewards"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChestUnlockSound" type="AudioStreamPlayer" parent="CanvasLayer/Control"]
+stream = ExtResource( 8 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 6
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.329412 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="CanvasLayer/Control/TextureButton" to="." method="_on_TextureButton_button_up"]

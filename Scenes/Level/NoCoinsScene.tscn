@@ -1,0 +1,116 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_heading.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_inside_text.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/close_red.png" type="Texture" id=3]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/store_blue.png" type="Texture" id=4]
+[ext_resource path="res://Resources/UI Elements/Window/window_big.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/LevelScene/NoCoinsScene.gd" type="Script" id=6]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/store_blue.png" type="Texture" id=7]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/close_red.png" type="Texture" id=8]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 9
+
+[node name="NoCoins" type="Control" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/NoCoins"]
+anchor_left = 0.516
+anchor_top = 0.482
+anchor_right = 0.516
+anchor_bottom = 0.482
+margin_left = -245.311
+margin_top = -205.59
+margin_right = 1636.69
+margin_bottom = 1186.41
+rect_scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="CanvasLayer/NoCoins"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -121.677
+margin_top = -198.177
+margin_right = 160.323
+margin_bottom = -167.177
+custom_fonts/font = ExtResource( 1 )
+text = "Not Enough Coins"
+
+[node name="Label2" type="Label" parent="CanvasLayer/NoCoins"]
+anchor_left = 0.519
+anchor_top = 0.484
+anchor_right = 0.519
+anchor_bottom = 0.484
+margin_left = -165.456
+margin_top = -138.4
+margin_right = 145.544
+margin_bottom = 60.6
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "You don't have enough coins for this item.
+
+ You can get coins from the Coins section of the Shop."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseButton" type="TextureButton" parent="CanvasLayer/NoCoins"]
+anchor_left = 0.5
+anchor_top = 0.417
+anchor_right = 0.5
+anchor_bottom = 0.417
+margin_left = -207.944
+margin_top = 131.638
+margin_right = -29.944
+margin_bottom = 311.638
+rect_scale = Vector2( 0.35, 0.35 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GetCoinsButton" type="TextureButton" parent="CanvasLayer/NoCoins"]
+anchor_left = 0.5
+anchor_top = 0.401
+anchor_right = 0.5
+anchor_bottom = 0.401
+margin_left = 123.0
+margin_top = 117.4
+margin_right = 301.0
+margin_bottom = 297.4
+rect_scale = Vector2( 0.6, 0.6 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 8
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.556863 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="CanvasLayer/NoCoins/CloseButton" to="." method="_on_CloseButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/NoCoins/GetCoinsButton" to="." method="_on_GetCoinsButton_button_up"]

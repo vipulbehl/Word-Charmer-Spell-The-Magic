@@ -1,0 +1,177 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Resources/Fonts/cloudy_home_screen_headings.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/UI Elements/Window/window_big.png" type="Texture" id=2]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/close_red.png" type="Texture" id=3]
+[ext_resource path="res://Resources/UI Elements/Window/window_big_separator.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Fonts/cloudy_store_potion_tile_heading.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Resources/Fonts/cloudy_item_price.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/close_red.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/PlayScene/HelpScene.gd" type="Script" id=12]
+
+[node name="Node2D" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 12 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 6
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -275.894
+margin_top = -234.423
+margin_right = 1606.11
+margin_bottom = 1157.58
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelpHeading" type="Label" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -114.238
+margin_top = -218.762
+margin_right = 162.762
+margin_bottom = -174.762
+custom_fonts/font = ExtResource( 1 )
+text = "MAGIC TILES"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="TextureButton" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -235.893
+margin_top = 137.793
+margin_right = -57.8931
+margin_bottom = 317.793
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control"]
+anchor_left = 0.513
+anchor_top = 0.364
+anchor_right = 0.513
+anchor_bottom = 0.364
+margin_left = -85.879
+margin_top = -70.8324
+margin_right = 76.121
+margin_bottom = 77.1676
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WindowControl" type="Control" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -475.135
+margin_top = -273.837
+margin_right = -435.135
+margin_bottom = -233.837
+
+[node name="window_big_separator" type="Sprite" parent="CanvasLayer/Control/WindowControl"]
+position = Vector2( 486.241, 290.657 )
+scale = Vector2( 0.321786, 0.35506 )
+texture = ExtResource( 4 )
+
+[node name="TileHeadingContainer" type="CenterContainer" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 405.52
+margin_top = -140.887
+margin_right = 897.52
+margin_bottom = -100.887
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileDescriptionContainer" type="CenterContainer" parent="CanvasLayer/Control"]
+anchor_right = 0.109
+anchor_bottom = 0.206
+margin_left = 866.943
+margin_top = -26.9327
+margin_right = 1255.33
+margin_bottom = -31.5327
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileHeading" type="Label" parent="CanvasLayer/Control"]
+anchor_left = 0.509
+anchor_top = 0.5
+anchor_right = 0.509
+anchor_bottom = 0.5
+margin_left = -178.881
+margin_top = 29.0
+margin_right = 179.119
+margin_bottom = 57.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Freeze Tile"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileDescription" type="Label" parent="CanvasLayer/Control"]
+anchor_left = 0.508
+anchor_top = 0.474
+anchor_right = 0.508
+anchor_bottom = 0.474
+margin_left = -185.396
+margin_top = 72.7137
+margin_right = 184.604
+margin_bottom = 148.714
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Freezes the enemy (skips the turn) and deals an extra damage of 10HP"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="Background" type="ColorRect" parent="CanvasLayer2"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.560784 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="CanvasLayer/Control/Close" to="." method="_on_Close_button_up"]

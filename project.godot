@@ -1,0 +1,59 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "AdMob",
+"language": "GDScript",
+"path": "res://admob-lib/admob.gd"
+} ]
+_global_script_class_icons={
+"AdMob": "res://admob-lib/icon.png"
+}
+
+[NativeLib]
+
+Python="C:/Users/vipul/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0/python.exe"
+
+[application]
+
+config/name="Word Charmer"
+run/main_scene="res://Scenes/SplashScreen.tscn"
+boot_splash/image="res://Resources/UI Elements/Boot/Splash.png"
+boot_splash/bg_color=Color( 0.12549, 0.145098, 0.192157, 1 )
+config/icon="res://icon.png"
+config/quit_on_go_back=false
+
+[autoload]
+
+Global="*res://Scripts/global.gd"
+GooglePlay="*res://Scripts/Integrations/GooglePlay.gd"
+SavedGames="*res://Scripts/Integrations/SavedGames.gd"
+localnotification="*res://scripts/localnotification.gd"
+
+[display]
+
+window/size/test_width=1200
+window/size/test_height=600
+window/handheld/orientation="sensor_landscape"
+window/stretch/mode="2d"
+window/stretch/aspect="keep_height"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "NativeLib", "import_scml" )
+
+[global]
+
+android=false
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true

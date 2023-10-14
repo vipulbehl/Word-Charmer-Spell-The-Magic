@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/PlayScene/SelectedButtonTextureButton.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/PlayScene/SelectedButtonCenterContainer.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://Resources/UI Elements/Buttons/Cartoon RPG UI_Slot - Item.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Themes/Dimbo Regular24.tres" type="DynamicFont" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "selected_animation"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 10.0, 0.0, -10.0, 0.0 ]
+}
+
+[node name="SelectedButtonCenterContainer" type="CenterContainer" groups=[
+"animate_selected",
+]]
+margin_right = 50.0
+margin_bottom = 50.0
+rect_pivot_offset = Vector2( 30, 30 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectedButtonTextureButton" type="TextureButton" parent="."]
+margin_right = 60.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 60, 60 )
+texture_normal = ExtResource( 4 )
+texture_disabled = ExtResource( 3 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectedButtonLabel" type="Label" parent="."]
+margin_left = 23.0
+margin_top = 13.0
+margin_right = 36.0
+margin_bottom = 47.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectionAnimation" type="AnimationPlayer" parent="."]
+playback_speed = 4.0
+anims/selected_animation = SubResource( 1 )
+
+[connection signal="pressed" from="SelectedButtonTextureButton" to="SelectedButtonTextureButton" method="_on_SelectedButtonTextureButton_pressed"]

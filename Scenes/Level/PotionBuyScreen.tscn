@@ -1,0 +1,108 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_heading.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/UI Elements/Window/window_big.png" type="Texture" id=2]
+[ext_resource path="res://Resources/UI Elements/Window/window_big_separator.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Fonts/cloudy_store_potion_tile_heading.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_inside_text_1px_small.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/buy_green.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/LevelScene/PotionBuyScreen.gd" type="Script" id=7]
+[ext_resource path="res://Resources/Sprites/Sounds/normal_button_click.wav" type="AudioStream" id=8]
+[ext_resource path="res://Resources/Sprites/Sounds/buy_upgrade_sound.wav" type="AudioStream" id=9]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/buy_green.png" type="Texture" id=10]
+
+[node name="Control" type="Control"]
+anchor_right = 0.556
+anchor_bottom = 0.71
+margin_top = -1.0
+margin_right = -0.344055
+margin_bottom = -3.05176e-05
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 1882.0
+margin_bottom = 1392.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Heading" type="Label" parent="."]
+margin_left = 179.125
+margin_top = 21.3268
+margin_right = 384.125
+margin_bottom = 52.3268
+custom_fonts/font = ExtResource( 1 )
+text = "BUY POTIONS"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 79.0
+margin_top = 66.0
+margin_right = 495.0
+margin_bottom = 201.0
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control1" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="window_big_separator" type="Sprite" parent="Control1"]
+position = Vector2( 280.907, 260.855 )
+scale = Vector2( 0.318889, 0.250672 )
+texture = ExtResource( 3 )
+
+[node name="PotionHeading" type="Label" parent="."]
+margin_left = 106.0
+margin_top = 273.0
+margin_right = 461.0
+margin_bottom = 305.0
+grow_horizontal = 2
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Heal Potion"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PotionDescription" type="RichTextLabel" parent="."]
+margin_left = 103.0
+margin_top = 325.0
+margin_right = 462.0
+margin_bottom = 392.0
+rect_clip_content = false
+custom_fonts/normal_font = ExtResource( 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "This is some sample text"
+text = "This is some sample text"
+fit_content_height = true
+scroll_active = false
+
+[node name="BuyButton" type="TextureButton" parent="."]
+margin_left = 456.0
+margin_top = 363.0
+margin_right = 634.0
+margin_bottom = 543.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NormalButtonClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="BuyButtonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[connection signal="button_up" from="BuyButton" to="." method="_on_BuyButton_button_up"]

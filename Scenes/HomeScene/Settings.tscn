@@ -1,0 +1,225 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_heading.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_game_over_heading.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/close_red.png" type="Texture" id=3]
+[ext_resource path="res://Resources/UI Elements/Window/window_big.png" type="Texture" id=4]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/sound_on_yellow.png" type="Texture" id=5]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/close_red.png" type="Texture" id=6]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/music_on_yellow.png" type="Texture" id=7]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/sound_on_yellow.png" type="Texture" id=8]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/music_on_yellow.png" type="Texture" id=9]
+[ext_resource path="res://Scripts/HomeScene/Settings.gd" type="Script" id=10]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/share_yellow.png" type="Texture" id=11]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/rate_yellow.png" type="Texture" id=12]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/rate_yellow.png" type="Texture" id=13]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/share_yellow.png" type="Texture" id=14]
+[ext_resource path="res://Resources/UI Elements/Window/button_text_background.png" type="Texture" id=15]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 10 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 7
+
+[node name="Settings" type="Control" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Settings"]
+anchor_left = 0.5
+anchor_top = 0.436
+anchor_right = 0.5
+anchor_bottom = 0.436
+margin_left = -232.838
+margin_top = -133.997
+margin_right = 1649.17
+margin_bottom = 1258.0
+rect_scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control_1" type="Control" parent="CanvasLayer/Settings"]
+anchor_left = 0.5
+anchor_top = 0.428
+anchor_right = 0.5
+anchor_bottom = 0.428
+margin_left = -454.714
+margin_top = -242.33
+margin_right = -414.714
+margin_bottom = -202.33
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button_text_background" type="Sprite" parent="CanvasLayer/Settings/Control_1"]
+position = Vector2( 466.002, 223.223 )
+scale = Vector2( 0.334, 0.3 )
+texture = ExtResource( 15 )
+
+[node name="Control_2" type="Control" parent="CanvasLayer/Settings"]
+anchor_left = 0.5
+anchor_top = 0.428
+anchor_right = 0.5
+anchor_bottom = 0.428
+margin_left = -452.714
+margin_top = -171.33
+margin_right = -412.714
+margin_bottom = -131.33
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button_text_background" type="Sprite" parent="CanvasLayer/Settings/Control_2"]
+position = Vector2( 463.002, 223.223 )
+scale = Vector2( 0.334, 0.3 )
+texture = ExtResource( 15 )
+
+[node name="SettingsLabel" type="Label" parent="CanvasLayer/Settings"]
+anchor_left = 0.5
+anchor_top = 0.431
+anchor_right = 0.5
+anchor_bottom = 0.431
+margin_left = -79.9706
+margin_top = -122.813
+margin_right = 97.0294
+margin_bottom = -82.8132
+custom_fonts/font = ExtResource( 2 )
+text = "Settings"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="close" type="TextureButton" parent="CanvasLayer/Settings"]
+anchor_left = 0.5
+anchor_top = 0.441
+anchor_right = 0.5
+anchor_bottom = 0.441
+margin_left = -190.391
+margin_top = 176.468
+margin_right = -12.3912
+margin_bottom = 356.468
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicButton" type="TextureButton" parent="CanvasLayer/Settings"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -86.7987
+margin_top = 76.4719
+margin_right = 91.2018
+margin_bottom = 256.473
+rect_scale = Vector2( 0.35, 0.35 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SoundButton" type="TextureButton" parent="CanvasLayer/Settings"]
+anchor_left = 0.508
+anchor_top = 0.5
+anchor_right = 0.508
+anchor_bottom = 0.5
+margin_left = 15.1594
+margin_top = 76.4719
+margin_right = 193.16
+margin_bottom = 256.473
+rect_scale = Vector2( 0.35, 0.35 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RateButton" type="TextureButton" parent="CanvasLayer/Settings"]
+anchor_left = 0.5
+anchor_top = 0.417
+anchor_right = 0.5
+anchor_bottom = 0.417
+margin_left = -104.698
+margin_top = -44.5137
+margin_right = 544.302
+margin_bottom = 135.486
+rect_scale = Vector2( 0.35, 0.35 )
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShareLabel" type="Label" parent="CanvasLayer/Settings"]
+anchor_left = 0.5
+anchor_top = 0.434
+anchor_right = 0.5
+anchor_bottom = 0.434
+margin_left = -23.0092
+margin_top = 33.481
+margin_right = 70.9908
+margin_bottom = 64.481
+custom_fonts/font = ExtResource( 1 )
+text = "Share"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RateLabel" type="Label" parent="CanvasLayer/Settings"]
+anchor_left = 0.5
+anchor_top = 0.434
+anchor_right = 0.5
+anchor_bottom = 0.434
+margin_left = -22.3609
+margin_top = -39.034
+margin_right = 53.6392
+margin_bottom = -8.03403
+custom_fonts/font = ExtResource( 1 )
+text = "Rate"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShareButton" type="TextureButton" parent="CanvasLayer/Settings"]
+anchor_left = 0.5
+anchor_top = 0.449
+anchor_right = 0.5
+anchor_bottom = 0.449
+margin_left = -104.698
+margin_top = 7.34009
+margin_right = 524.302
+margin_bottom = 187.34
+rect_scale = Vector2( 0.35, 0.35 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 6
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.498039 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="CanvasLayer/Settings/close" to="." method="_on_close_button_up"]
+[connection signal="button_up" from="CanvasLayer/Settings/MusicButton" to="." method="_on_MusicButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/Settings/SoundButton" to="." method="_on_SoundButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/Settings/RateButton" to="." method="_on_RateButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/Settings/ShareButton" to="." method="_on_ShareButton_button_up"]

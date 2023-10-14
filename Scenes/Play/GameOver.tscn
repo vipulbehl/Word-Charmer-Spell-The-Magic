@@ -1,0 +1,309 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Resources/UI Elements/Window/window_defeat.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Themes/Dimbo Regular24.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scripts/PlayScene/GameOver.gd" type="Script" id=3]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/store_blue.png" type="Texture" id=4]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/store_blue.png" type="Texture" id=5]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/level_blue.png" type="Texture" id=6]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/video1_blue.png" type="Texture" id=7]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_game_over_heading.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Resources/UI Elements/Buttons/Cartoon RPG UI_Game Icon - Coin.png" type="Texture" id=9]
+[ext_resource path="res://Resources/Sprites/Sounds/Recording.wav" type="AudioStream" id=10]
+[ext_resource path="res://Resources/Themes/Dimbo Regular40.tres" type="DynamicFont" id=11]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/restart_orange.png" type="Texture" id=12]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/level_blue.png" type="Texture" id=13]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/restart_orange.png" type="Texture" id=14]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/video1_blue.png" type="Texture" id=15]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_inside_text.tres" type="DynamicFont" id=16]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_heading.tres" type="DynamicFont" id=17]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_inside_text_1px_small.tres" type="DynamicFont" id=18]
+
+[sub_resource type="Animation" id=1]
+resource_name = "revive_watch_ad"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.55, 0.55 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.556863 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ReviveWizard:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="Node2D" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="MenuPopup" type="Control" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="TextureRect" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -313.335
+margin_top = -250.059
+margin_right = 1020.67
+margin_bottom = 685.941
+rect_scale = Vector2( 0.5, 0.55 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.546
+anchor_top = 0.507
+anchor_right = 0.546
+anchor_bottom = 0.507
+margin_left = -135.796
+margin_top = -225.548
+margin_right = 104.204
+margin_bottom = -185.548
+custom_fonts/font = ExtResource( 8 )
+text = "GAME OVER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HomeButton" type="TextureButton" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.535
+anchor_top = 0.5
+anchor_right = 0.535
+anchor_bottom = 0.5
+margin_left = -210.161
+margin_top = 130.967
+margin_right = -32.1614
+margin_bottom = 310.967
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 13 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReplayButton" type="TextureButton" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.541
+anchor_top = 0.5
+anchor_right = 0.541
+anchor_bottom = 0.5
+margin_left = -77.921
+margin_top = 122.112
+margin_right = 100.079
+margin_bottom = 302.112
+rect_scale = Vector2( 0.65, 0.65 )
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 12 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShopButton" type="TextureButton" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.536
+anchor_top = 0.5
+anchor_right = 0.536
+anchor_bottom = 0.5
+margin_left = 94.8981
+margin_top = 132.026
+margin_right = 272.898
+margin_bottom = 312.026
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinsEarned" type="Label" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.496
+anchor_top = 0.333
+anchor_right = 0.496
+anchor_bottom = 0.333
+margin_left = -26.904
+margin_top = -24.8
+margin_right = 56.096
+margin_bottom = 6.2
+grow_horizontal = 2
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 1, 0.945098, 0, 1 )
+text = "Coins"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cartoon RPG UI_Game Icon - Coin" type="Sprite" parent="CanvasLayer/MenuPopup/CoinsEarned"]
+position = Vector2( -24.8969, 13.9385 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 9 )
+
+[node name="CoinsMultiplier" type="Label" parent="CanvasLayer/MenuPopup"]
+visible = false
+anchor_left = 0.496
+anchor_top = 0.333
+anchor_right = 0.496
+anchor_bottom = 0.333
+margin_left = -63.4561
+margin_top = 57.7428
+margin_right = 118.544
+margin_bottom = 91.7428
+custom_fonts/font = ExtResource( 2 )
+text = "Coins Multiplier : x1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReviveWizard" type="TextureButton" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.498
+anchor_top = 0.443
+anchor_right = 0.498
+anchor_bottom = 0.443
+margin_left = 153.356
+margin_top = -26.2572
+margin_right = 331.356
+margin_bottom = 153.743
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 15 )
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReviveAdAnimation" type="AnimationPlayer" parent="CanvasLayer/MenuPopup/ReviveWizard"]
+autoplay = "revive_watch_ad"
+anims/revive_watch_ad = SubResource( 1 )
+
+[node name="ReviveWizardText" type="Label" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.516
+anchor_top = 0.434
+anchor_right = 0.516
+anchor_bottom = 0.434
+margin_left = -209.384
+margin_top = -33.4
+margin_right = 106.616
+margin_bottom = 15.6
+custom_fonts/font = ExtResource( 11 )
+text = "Revive Wizard"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReviveWizardDescription" type="Label" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.516
+anchor_top = 0.434
+anchor_right = 0.516
+anchor_bottom = 0.434
+margin_left = -225.384
+margin_top = 10.6
+margin_right = 120.616
+margin_bottom = 85.6
+custom_fonts/font = ExtResource( 16 )
+text = "Watch a video ad to revive the Wizard with 25% health"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpgradeWizardOption" type="Label" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.516
+anchor_top = 0.434
+anchor_right = 0.516
+anchor_bottom = 0.434
+margin_left = -209.384
+margin_top = 107.6
+margin_right = 226.616
+margin_bottom = 150.6
+custom_fonts/font = ExtResource( 18 )
+custom_colors/font_color = Color( 0.592157, 0.584314, 0.584314, 1 )
+text = "Tip : Visit Shop to Upgrade Wizard"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOverAnimation" type="AnimationPlayer" parent="CanvasLayer/MenuPopup"]
+anims/game_over = SubResource( 2 )
+
+[node name="GameOverSound" type="AudioStreamPlayer" parent="CanvasLayer/MenuPopup"]
+stream = ExtResource( 10 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="BackgroundTint" type="ColorRect" parent="CanvasLayer2"]
+visible = false
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.678431 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="CanvasLayer/MenuPopup/HomeButton" to="." method="_on_HomeButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/MenuPopup/ReplayButton" to="." method="_on_ReplayButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/MenuPopup/ShopButton" to="." method="_on_ShopButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/MenuPopup/ReviveWizard" to="." method="_on_ReviveWizard_button_up"]

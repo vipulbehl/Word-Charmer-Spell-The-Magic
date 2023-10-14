@@ -1,0 +1,303 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/Next_green.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_inside_text.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scripts/PlayScene/LevelComplete.gd" type="Script" id=3]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/Next_green.png" type="Texture" id=4]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/store_blue.png" type="Texture" id=5]
+[ext_resource path="res://Resources/UI Elements/Window/window_summary.png" type="Texture" id=6]
+[ext_resource path="res://Resources/UI Elements/Buttons/window_summary_victory.png" type="Texture" id=7]
+[ext_resource path="res://Resources/UI Elements/Buttons/Cartoon RPG UI_Game Icon - Coin.png" type="Texture" id=8]
+[ext_resource path="res://Resources/Sprites/Sounds/level_complete.wav" type="AudioStream" id=9]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/store_blue.png" type="Texture" id=11]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/level_blue.png" type="Texture" id=12]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/level_blue.png" type="Texture" id=13]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/video1_blue.png" type="Texture" id=14]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/video1_blue.png" type="Texture" id=15]
+[ext_resource path="res://Resources/Fonts/cloudy_potion_count.tres" type="DynamicFont" id=16]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_heading.tres" type="DynamicFont" id=17]
+
+[sub_resource type="Animation" id=1]
+resource_name = "double_coins_ad"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.5 ), Vector2( 0.55, 0.55 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("DoubleCoinsVideo:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="MenuPopup" type="Control" parent="CanvasLayer"]
+pause_mode = 2
+visible = false
+modulate = Color( 1, 1, 1, 0.888889 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="TextureRect" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.531
+anchor_top = 0.494
+anchor_right = 0.531
+anchor_bottom = 0.494
+margin_left = -285.008
+margin_top = -165.926
+margin_right = 1048.99
+margin_bottom = 1092.07
+rect_scale = Vector2( 0.4, 0.32 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextLevel" type="TextureButton" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.508
+anchor_top = 0.5
+anchor_right = 0.508
+anchor_bottom = 0.5
+margin_left = -35.2999
+margin_top = 118.0
+margin_right = 142.7
+margin_bottom = 298.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 4 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Home" type="TextureButton" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -140.972
+margin_top = 127.125
+margin_right = 37.0277
+margin_bottom = 307.125
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Store" type="TextureButton" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 100.172
+margin_top = 127.125
+margin_right = 278.172
+margin_bottom = 307.125
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DoubleCoinsVideo" type="TextureButton" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.516
+anchor_top = 0.479
+anchor_right = 0.516
+anchor_bottom = 0.479
+margin_left = 83.7877
+margin_top = 6.18576
+margin_right = 261.788
+margin_bottom = 186.186
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.5, 0.5 )
+disabled = true
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 15 )
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DoubleCoinsAnimation" type="AnimationPlayer" parent="CanvasLayer/MenuPopup/DoubleCoinsVideo"]
+autoplay = "double_coins_ad"
+anims/double_coins_ad = SubResource( 1 )
+
+[node name="DoubleCoinsTextHeading" type="Label" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.5
+anchor_top = 0.528
+anchor_right = 0.5
+anchor_bottom = 0.528
+margin_left = -145.0
+margin_top = -24.8
+margin_right = 96.0
+margin_bottom = 6.20001
+custom_fonts/font = ExtResource( 17 )
+text = "Double Coins"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DoubleCoinsText" type="Label" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.5
+anchor_top = 0.528
+anchor_right = 0.5
+anchor_bottom = 0.528
+margin_left = -146.0
+margin_top = 4.20001
+margin_right = 95.0
+margin_bottom = 67.2
+custom_fonts/font = ExtResource( 16 )
+text = "Watch ad to double the coins earned (x2)"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinsEarned" type="Label" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.5
+anchor_top = 0.538
+anchor_right = 0.5
+anchor_bottom = 0.538
+margin_left = -127.109
+margin_top = -114.548
+margin_right = 188.891
+margin_bottom = -65.5483
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 1, 0.952941, 0.0705882, 1 )
+text = "Coins Earned : 2000"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cartoon RPG UI_Game Icon - Coin" type="Sprite" parent="CanvasLayer/MenuPopup/CoinsEarned"]
+position = Vector2( -23.2427, 24.4718 )
+scale = Vector2( 0.3, 0.297632 )
+texture = ExtResource( 8 )
+
+[node name="CoinMultiplier" type="Label" parent="CanvasLayer/MenuPopup"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.538
+anchor_right = 0.5
+anchor_bottom = 0.538
+margin_left = -169.552
+margin_top = -89.0278
+margin_right = 213.448
+margin_bottom = -40.0278
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0.952941, 0.0705882, 1 )
+text = "x3 Multiplier Applied"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="CanvasLayer/MenuPopup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = -472.0
+margin_bottom = -260.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="window_summary_victory" type="Sprite" parent="CanvasLayer/MenuPopup/Control"]
+position = Vector2( 530.538, 128.94 )
+scale = Vector2( 0.45, 0.45 )
+texture = ExtResource( 7 )
+
+[node name="LevelCompleteAnimation" type="AnimationPlayer" parent="CanvasLayer/MenuPopup"]
+anims/level_complete = SubResource( 2 )
+
+[node name="LevelCompleteAudio" type="AudioStreamPlayer" parent="CanvasLayer/MenuPopup"]
+stream = ExtResource( 9 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="BackgroundTint" type="ColorRect" parent="CanvasLayer2"]
+visible = false
+show_behind_parent = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -912.0
+margin_top = -481.0
+margin_right = 3497.0
+margin_bottom = 977.0
+color = Color( 0, 0, 0, 0.678431 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="CanvasLayer/MenuPopup/NextLevel" to="CanvasLayer/MenuPopup" method="_on_NextLevel_button_up"]
+[connection signal="button_up" from="CanvasLayer/MenuPopup/Home" to="CanvasLayer/MenuPopup" method="_on_Home_button_up"]
+[connection signal="button_up" from="CanvasLayer/MenuPopup/Store" to="CanvasLayer/MenuPopup" method="_on_Store_button_up"]
+[connection signal="button_up" from="CanvasLayer/MenuPopup/DoubleCoinsVideo" to="CanvasLayer/MenuPopup" method="_on_DoubleCoinsVideo_button_up"]

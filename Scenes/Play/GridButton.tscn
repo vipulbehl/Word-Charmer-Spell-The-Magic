@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Themes/Dimbo Regular50.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/UI Elements/Buttons/Cartoon RPG UI_Slot - Item.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/PlayScene/GridButton.gd" type="Script" id=3]
+[ext_resource path="res://Resources/UI Elements/GridButtons/gold.png" type="Texture" id=4]
+[ext_resource path="res://Resources/UI Elements/Buttons/emptytile.png" type="Texture" id=5]
+[ext_resource path="res://Resources/UI Elements/Buttons/press3.png" type="Texture" id=6]
+[ext_resource path="res://Resources/Sprites/Sounds/grid_button_click.wav" type="AudioStream" id=7]
+
+[node name="CenterContainer" type="CenterContainer"]
+margin_right = 10.0
+margin_bottom = 10.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_right = 80.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 6 )
+texture_disabled = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 28.0
+margin_top = 9.0
+margin_right = 51.0
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonRarity" type="Sprite" parent="."]
+position = Vector2( 64.9924, 58.8712 )
+scale = Vector2( 0.06, 0.06 )
+texture = ExtResource( 4 )
+
+[node name="ButtonClickAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

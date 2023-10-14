@@ -1,0 +1,292 @@
+[gd_resource type="SpriteFrames" load_steps=103 format=2]
+
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/paralyze/tesla_ball7.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/heal/fire2.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/normal/wizatkpwr2.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/burn/Sun_strike3.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/normal/wizatkpwr1.png" type="Texture" id=5]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/heal/fire3.png" type="Texture" id=6]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/burn/Sun_strike6.png" type="Texture" id=7]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/burn/Sun_strike5.png" type="Texture" id=8]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/freeze/skeleton-animation_5.png" type="Texture" id=10]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/freeze/skeleton-animation_4.png" type="Texture" id=11]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/freeze/skeleton-animation_3.png" type="Texture" id=12]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/freeze/skeleton-animation_0.png" type="Texture" id=13]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/freeze/skeleton-animation_2.png" type="Texture" id=14]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/freeze/skeleton-animation_1.png" type="Texture" id=16]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/paralyze/tesla_ball14.png" type="Texture" id=17]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/paralyze/tesla_ball8.png" type="Texture" id=18]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/heal/fire4.png" type="Texture" id=21]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/paralyze/tesla_ball12.png" type="Texture" id=23]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/powerup/Spiral1.png" type="Texture" id=24]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/heal/fire7.png" type="Texture" id=27]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/powerup/Spiral3.png" type="Texture" id=28]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/questionMark/tornado6.png" type="Texture" id=29]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/paralyze/tesla_ball6.png" type="Texture" id=30]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/questionMark/tornado9.png" type="Texture" id=31]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/heal/fire5.png" type="Texture" id=32]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/questionMark/tornado5.png" type="Texture" id=33]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/paralyze/tesla_ball11.png" type="Texture" id=34]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/paralyze/tesla_ball13.png" type="Texture" id=35]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/questionMark/tornado7.png" type="Texture" id=36]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/paralyze/tesla_ball9.png" type="Texture" id=37]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/questionMark/tornado8.png" type="Texture" id=38]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_1_928468.png" type="Texture" id=39]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_1_59161.png" type="Texture" id=40]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_1_965040.png" type="Texture" id=41]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_10_450617.png" type="Texture" id=42]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_10_286473.png" type="Texture" id=43]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_10_903894.png" type="Texture" id=44]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_1_5498.png" type="Texture" id=45]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_28_511912.png" type="Texture" id=46]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_13_25945.png" type="Texture" id=48]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_18_819685.png" type="Texture" id=49]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_22_303949.png" type="Texture" id=50]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_23_893658.png" type="Texture" id=51]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_29_308170.png" type="Texture" id=52]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_11_695958.png" type="Texture" id=53]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_17_923636.png" type="Texture" id=54]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_2_166189.png" type="Texture" id=56]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_26_410429.png" type="Texture" id=57]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_18_120918.png" type="Texture" id=58]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_15_30121.png" type="Texture" id=59]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_12_334957.png" type="Texture" id=60]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_2_895508.png" type="Texture" id=61]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_16_70550.png" type="Texture" id=62]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_11_577176.png" type="Texture" id=63]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_18_126097.png" type="Texture" id=64]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_20_902272.png" type="Texture" id=65]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_12_754179.png" type="Texture" id=66]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_23_600396.png" type="Texture" id=67]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_20_611040.png" type="Texture" id=68]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_19_12960.png" type="Texture" id=69]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_14_998811.png" type="Texture" id=70]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_27_477805.png" type="Texture" id=71]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_12_301175.png" type="Texture" id=72]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_19_81549.png" type="Texture" id=73]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_24_771002.png" type="Texture" id=74]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_25_227190.png" type="Texture" id=75]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_16_802106.png" type="Texture" id=76]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_19_970441.png" type="Texture" id=77]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_17_53884.png" type="Texture" id=78]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_21_973411.png" type="Texture" id=79]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_16_105168.png" type="Texture" id=80]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_21_731471.png" type="Texture" id=81]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_2_532167.png" type="Texture" id=82]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_21_742251.png" type="Texture" id=83]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_22_79596.png" type="Texture" id=84]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_20_991725.png" type="Texture" id=85]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_24_461882.png" type="Texture" id=86]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_17_403095.png" type="Texture" id=87]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_11_766956.png" type="Texture" id=88]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_6_802835.png" type="Texture" id=90]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_7_6843.png" type="Texture" id=92]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_8_648735.png" type="Texture" id=93]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_9_955924.png" type="Texture" id=94]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_5_580907.png" type="Texture" id=96]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_6_452226.png" type="Texture" id=104]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_6_541484.png" type="Texture" id=105]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_6_752361.png" type="Texture" id=106]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_5_555010.png" type="Texture" id=108]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_5_3957.png" type="Texture" id=109]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_5_258716.png" type="Texture" id=110]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_4_20808.png" type="Texture" id=112]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_4_50674.png" type="Texture" id=119]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_4_95714.png" type="Texture" id=120]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_4_185746.png" type="Texture" id=121]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_3_208663.png" type="Texture" id=122]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_3_107284.png" type="Texture" id=123]
+[ext_resource path="res://Resources/Sprites/Throwable/EnemyAttacks/enemy_3_435250.png" type="Texture" id=124]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/heal/fire6.png" type="Texture" id=130]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/paralyze/tesla_ball15.png" type="Texture" id=131]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/paralyze/tesla_ball10.png" type="Texture" id=132]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/questionMark/tornado4.png" type="Texture" id=133]
+[ext_resource path="res://Resources/Sprites/Throwable/WizardAttacks/powerup/Spiral2.png" type="Texture" id=134]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 8 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Burn",
+"speed": 25.0
+}, {
+"frames": [ ExtResource( 67 ), ExtResource( 51 ) ],
+"loop": true,
+"name": "enemy_23",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 78 ), ExtResource( 87 ), ExtResource( 54 ) ],
+"loop": true,
+"name": "enemy_17",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 94 ) ],
+"loop": true,
+"name": "enemy_9",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 6 ), ExtResource( 21 ), ExtResource( 32 ), ExtResource( 130 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "Heal",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 69 ), ExtResource( 73 ), ExtResource( 77 ) ],
+"loop": true,
+"name": "enemy_19",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 72 ), ExtResource( 60 ), ExtResource( 66 ) ],
+"loop": true,
+"name": "enemy_12",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 134 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "Powerup",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 71 ) ],
+"loop": true,
+"name": "enemy_27",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 57 ) ],
+"loop": true,
+"name": "enemy_26",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 133 ), ExtResource( 33 ), ExtResource( 29 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "QuestionMark",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 43 ), ExtResource( 42 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "enemy_10",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 90 ) ],
+"loop": true,
+"name": "enemy_6",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 84 ), ExtResource( 50 ) ],
+"loop": true,
+"name": "enemy_22",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 123 ), ExtResource( 122 ), ExtResource( 124 ) ],
+"loop": true,
+"name": "enemy_3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "fireball",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 46 ) ],
+"loop": true,
+"name": "enemy_28",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 92 ) ],
+"loop": true,
+"name": "enemy_7",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 62 ), ExtResource( 80 ), ExtResource( 76 ) ],
+"loop": true,
+"name": "enemy_16",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 58 ), ExtResource( 64 ), ExtResource( 49 ) ],
+"loop": true,
+"name": "enemy_18",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 109 ), ExtResource( 110 ), ExtResource( 108 ), ExtResource( 96 ) ],
+"loop": true,
+"name": "enemy_5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ), ExtResource( 1 ), ExtResource( 18 ), ExtResource( 37 ), ExtResource( 132 ), ExtResource( 34 ), ExtResource( 23 ), ExtResource( 35 ), ExtResource( 17 ), ExtResource( 131 ) ],
+"loop": true,
+"name": "Paralyse",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 52 ) ],
+"loop": true,
+"name": "enemy_29",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 45 ), ExtResource( 40 ), ExtResource( 39 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "enemy_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 93 ) ],
+"loop": true,
+"name": "enemy_8",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 75 ) ],
+"loop": true,
+"name": "enemy_25",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 68 ), ExtResource( 65 ), ExtResource( 85 ) ],
+"loop": true,
+"name": "enemy_20",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 119 ), ExtResource( 121 ), ExtResource( 120 ), ExtResource( 112 ) ],
+"loop": true,
+"name": "enemy_4",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "Freeze",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 56 ), ExtResource( 82 ), ExtResource( 61 ) ],
+"loop": true,
+"name": "enemy_2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 86 ), ExtResource( 74 ) ],
+"loop": true,
+"name": "enemy_24",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 48 ) ],
+"loop": true,
+"name": "enemy_13",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 70 ) ],
+"loop": true,
+"name": "enemy_14",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 81 ), ExtResource( 83 ), ExtResource( 79 ) ],
+"loop": true,
+"name": "enemy_21",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 63 ), ExtResource( 53 ), ExtResource( 88 ) ],
+"loop": true,
+"name": "enemy_11",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 59 ) ],
+"loop": true,
+"name": "enemy_15",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Empty",
+"speed": 5.0
+} ]

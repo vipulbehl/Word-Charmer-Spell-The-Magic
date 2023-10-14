@@ -1,0 +1,654 @@
+[gd_scene load_steps=57 format=2]
+
+[ext_resource path="res://Scripts/PlayScene/ShuffleButton.gd" type="Script" id=1]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/info_green.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Play/Background.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/PlayScene/PlayScene.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Play/HeathBar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Resources/UI Elements/Buttons/Potion/PotionMainPressed.png" type="Texture" id=6]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate13.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/PlayScene/Attack.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/PlayScene/SelectedLettersGrid.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/Play/ProgressBar.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Resources/UI Elements/Buttons/Potion/PotionMain.png" type="Texture" id=11]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate14.png" type="Texture" id=12]
+[ext_resource path="res://Resources/UI Elements/Buttons/Potion/PowerPotion.png" type="Texture" id=13]
+[ext_resource path="res://Resources/UI Elements/Buttons/Cartoon RPG UI_Slot - Item Disabled.png" type="Texture" id=14]
+[ext_resource path="res://Resources/Fonts/cloudy_stage_number.tres" type="DynamicFont" id=15]
+[ext_resource path="res://Resources/UI Elements/Buttons/Attack Animations/Attackbuttonempty.png" type="Texture" id=17]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/find_green.png" type="Texture" id=21]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/find_green.png" type="Texture" id=22]
+[ext_resource path="res://Resources/Sprites/Sounds/normal_button_click.wav" type="AudioStream" id=23]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate15.png" type="Texture" id=24]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate16.png" type="Texture" id=25]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate17.png" type="Texture" id=26]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate.png" type="Texture" id=27]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflestill.png" type="Texture" id=28]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate2.png" type="Texture" id=29]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate4.png" type="Texture" id=30]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate6.png" type="Texture" id=31]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate3.png" type="Texture" id=32]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate5.png" type="Texture" id=33]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate1.png" type="Texture" id=34]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate11.png" type="Texture" id=35]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate8.png" type="Texture" id=36]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate7.png" type="Texture" id=37]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate9.png" type="Texture" id=38]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate10.png" type="Texture" id=39]
+[ext_resource path="res://Resources/UI Elements/Buttons/Shuffle Animation/shufflerotate12.png" type="Texture" id=40]
+[ext_resource path="res://Resources/Sprites/Sounds/in_game_sound.wav" type="AudioStream" id=41]
+[ext_resource path="res://Resources/Themes/Dimbo Regular24.tres" type="DynamicFont" id=42]
+[ext_resource path="res://Resources/Themes/Dimbo Regular40.tres" type="DynamicFont" id=43]
+[ext_resource path="res://admob-lib/admob.gd" type="Script" id=44]
+[ext_resource path="res://Scenes/Play/Tutorial.tscn" type="PackedScene" id=45]
+[ext_resource path="res://Resources/Sprites/Sounds/hit.wav" type="AudioStream" id=46]
+[ext_resource path="res://Resources/Sprites/Sounds/die.wav" type="AudioStream" id=47]
+[ext_resource path="res://Resources/Sprites/Sounds/attack.wav" type="AudioStream" id=48]
+[ext_resource path="res://Resources/Sprites/Sounds/coin.wav" type="AudioStream" id=49]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/pause_green.png" type="Texture" id=50]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/info_green.png" type="Texture" id=51]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/pause_green.png" type="Texture" id=52]
+[ext_resource path="res://Resources/UI Elements/Buttons/Attack Animations/2.png" type="Texture" id=53]
+[ext_resource path="res://Resources/UI Elements/Buttons/Attack Animations/1.png" type="Texture" id=54]
+[ext_resource path="res://Resources/UI Elements/Buttons/Attack Animations/Attackbuttonstickglow.png" type="Texture" id=55]
+[ext_resource path="res://Resources/UI Elements/Buttons/Attack Animations/Attackbuttonglow1.png" type="Texture" id=56]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 28 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 34 ), ExtResource( 29 ), ExtResource( 32 ), ExtResource( 30 ), ExtResource( 33 ), ExtResource( 31 ), ExtResource( 37 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 35 ), ExtResource( 40 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "shuffle",
+"speed": 17.0
+} ]
+
+[sub_resource type="Animation" id=2]
+resource_name = "disabled"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("DisabledBody:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Body:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Head:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BodyGlow:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HeadGlow:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "enabled"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("BodyGlow:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HeadGlow:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HeadGlow:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.4, 0.4 ), Vector2( 0.5, 0.5 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Head:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.4, 0.4 ), Vector2( 0.5, 0.5 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("DisabledBody:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Body:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Head:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("BodyGlow:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("HeadGlow:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "show_stage"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:custom_colors/font_outline_modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.8, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+
+[node name="Node2D" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -2.31165
+margin_bottom = -2.31165
+script = ExtResource( 4 )
+
+[node name="Buttons" type="GridContainer" parent="."]
+anchor_left = 0.481
+anchor_top = 0.887
+anchor_right = 0.485
+anchor_bottom = 0.887
+margin_left = -95.2023
+margin_top = -147.94
+margin_right = 134.589
+margin_bottom = 10.0596
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShuffleButton" type="TextureButton" parent="."]
+anchor_left = 0.22
+anchor_top = 0.793
+anchor_right = 0.22
+anchor_bottom = 0.793
+margin_left = -80.28
+margin_top = -75.8
+margin_right = 71.72
+margin_bottom = 47.2
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShuffleSprite" type="AnimatedSprite" parent="ShuffleButton"]
+position = Vector2( 65.8438, 22.261 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 1 )
+
+[node name="ShuffleCount" type="Label" parent="ShuffleButton"]
+anchor_left = 0.92
+anchor_top = 0.552
+anchor_right = 0.92
+anchor_bottom = 0.552
+margin_left = -7.47263
+margin_top = -18.0036
+margin_right = 11.5274
+margin_bottom = 15.9964
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 42 )
+text = "x1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectedLetters" type="Label" parent="."]
+visible = false
+margin_left = 167.0
+margin_top = 67.0
+margin_right = 723.0
+margin_bottom = 119.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectedLettersGrid" type="GridContainer" parent="."]
+anchor_left = 0.369
+anchor_top = 0.161
+anchor_right = 0.369
+anchor_bottom = 0.161
+margin_left = -41.9626
+margin_top = -29.6
+margin_right = 14.0374
+margin_bottom = 29.3996
+columns = 15
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Attack" type="TextureButton" parent="."]
+anchor_left = 0.858
+anchor_top = 0.712
+anchor_right = 0.858
+anchor_bottom = 0.712
+margin_left = -80.592
+margin_top = -123.2
+margin_right = 81.408
+margin_bottom = 122.8
+disabled = true
+expand = true
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DisabledBody" type="Sprite" parent="Attack"]
+visible = false
+position = Vector2( 76, 119 )
+rotation = 0.68766
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="Body" type="Sprite" parent="Attack"]
+position = Vector2( 76, 119 )
+rotation = 0.68766
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 53 )
+
+[node name="Head" type="Sprite" parent="Attack"]
+position = Vector2( 76, 119 )
+rotation = 0.68766
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 54 )
+
+[node name="BodyGlow" type="Sprite" parent="Attack"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 76, 119 )
+rotation = 0.68766
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 55 )
+
+[node name="HeadGlow" type="Sprite" parent="Attack"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 76, 119 )
+rotation = 0.68766
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 56 )
+
+[node name="AttackSprite" type="AnimationPlayer" parent="Attack"]
+playback_speed = 1.5
+anims/disabled = SubResource( 2 )
+anims/enabled = SubResource( 3 )
+
+[node name="EnemyContainer" type="CenterContainer" parent="."]
+anchor_left = 0.848
+anchor_top = 0.31
+anchor_right = 0.848
+anchor_bottom = 0.31
+margin_left = 208.31
+margin_top = -82.8179
+margin_right = 357.31
+margin_bottom = 51.1821
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerContainer" type="CenterContainer" parent="."]
+anchor_left = 0.01
+anchor_top = 0.318
+anchor_right = 0.01
+anchor_bottom = 0.318
+margin_left = 0.299626
+margin_top = -93.9235
+margin_right = 159.3
+margin_bottom = 76.0761
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseButton" type="TextureButton" parent="."]
+anchor_left = 0.959
+anchor_top = 0.923
+anchor_right = 0.959
+anchor_bottom = 0.923
+margin_left = -40.056
+margin_top = -40.4366
+margin_right = 223.944
+margin_bottom = 227.563
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 50 )
+texture_pressed = ExtResource( 52 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelpButton" type="TextureButton" parent="."]
+anchor_left = 0.844
+anchor_top = 0.913
+anchor_right = 0.844
+anchor_bottom = 0.913
+margin_left = -39.2178
+margin_top = -34.4366
+margin_right = 224.782
+margin_bottom = 233.564
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 51 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 3 )]
+
+[node name="PlayerHealthBar" parent="." instance=ExtResource( 5 )]
+anchor_left = 0.024
+anchor_top = 0.036
+anchor_right = 0.024
+anchor_bottom = 0.036
+margin_left = -10.576
+margin_top = -15.6
+margin_right = -10.576
+margin_bottom = -15.6
+
+[node name="EnemyHealthBar" parent="." instance=ExtResource( 5 )]
+anchor_left = 0.972
+anchor_top = 0.03
+anchor_right = 0.972
+anchor_bottom = 0.03
+margin_left = -256.62
+margin_top = -12.0
+margin_right = -256.62
+margin_bottom = -12.0
+
+[node name="ProgressBar" parent="." instance=ExtResource( 10 )]
+anchor_left = 0.5
+anchor_top = 0.038
+anchor_right = 0.5
+anchor_bottom = 0.038
+margin_left = -171.0
+margin_top = -16.8
+margin_right = -171.0
+margin_bottom = -16.8
+
+[node name="EndlessModeEnemyCount" type="Label" parent="."]
+visible = false
+anchor_left = 0.507
+anchor_top = 0.034
+anchor_right = 0.507
+anchor_bottom = 0.034
+margin_left = -58.168
+margin_top = -24.4
+margin_right = 58.832
+margin_bottom = 24.6
+grow_horizontal = 2
+custom_fonts/font = ExtResource( 43 )
+text = "Enemy : 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PotionsButton" type="TextureButton" parent="."]
+anchor_left = 0.081
+anchor_top = 0.719
+anchor_right = 0.081
+anchor_bottom = 0.719
+margin_left = -55.1126
+margin_top = -55.0962
+margin_right = 164.887
+margin_bottom = 164.904
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PowerupPotion" type="TextureButton" parent="."]
+anchor_left = 0.027
+anchor_top = 0.122
+anchor_right = 0.027
+anchor_bottom = 0.122
+margin_left = -23.9427
+margin_top = -23.8503
+margin_right = 136.057
+margin_bottom = 136.15
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 13 )
+texture_disabled = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FindWordAd" type="TextureButton" parent="."]
+anchor_left = 0.13
+anchor_top = 0.923
+anchor_right = 0.13
+anchor_bottom = 0.928
+margin_left = -39.12
+margin_top = -50.8
+margin_right = 138.88
+margin_bottom = 126.2
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HideButtons" type="TextureRect" parent="."]
+visible = false
+light_mask = 512
+margin_left = -291.319
+margin_top = -461.734
+margin_right = 2779.68
+margin_bottom = 1733.27
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AdMob" type="Node" parent="."]
+script = ExtResource( 44 )
+is_real = true
+
+[node name="TutorialNode" parent="." instance=ExtResource( 45 )]
+visible = false
+
+[node name="NormalButtonClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 41 )
+
+[node name="HitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 46 )
+
+[node name="DieSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 47 )
+
+[node name="AttackSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 48 )
+
+[node name="CoinsSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 49 )
+
+[node name="StageNumber" type="Label" parent="."]
+visible = false
+anchor_left = 0.507
+anchor_top = 0.241
+anchor_right = 0.507
+anchor_bottom = 0.241
+margin_left = -98.1078
+margin_top = -25.6
+margin_right = 97.8922
+margin_bottom = 25.4
+custom_colors/font_color = Color( 1, 1, 1, 0 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 0 )
+custom_fonts/font = ExtResource( 15 )
+text = "Stage 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StageNumberAnimation" type="AnimationPlayer" parent="StageNumber"]
+anims/show_stage = SubResource( 4 )
+
+[connection signal="pressed" from="ShuffleButton" to="ShuffleButton" method="_on_ShuffleButton_pressed"]
+[connection signal="pressed" from="Attack" to="Attack" method="_on_Attack_pressed"]
+[connection signal="gui_input" from="EnemyContainer" to="." method="_on_EnemyContainer_gui_input"]
+[connection signal="gui_input" from="PlayerContainer" to="." method="_on_PlayerContainer_gui_input"]
+[connection signal="button_down" from="PauseButton" to="." method="_on_PauseButton_button_down"]
+[connection signal="button_up" from="HelpButton" to="." method="_on_HelpButton_button_up"]
+[connection signal="button_down" from="PotionsButton" to="." method="_on_PotionsButton_button_down"]
+[connection signal="button_up" from="PowerupPotion" to="." method="_on_PowerupPotion_button_up"]
+[connection signal="button_up" from="FindWordAd" to="." method="_on_FindWordAd_button_up"]
+[connection signal="rewarded" from="AdMob" to="." method="_on_AdMob_rewarded"]

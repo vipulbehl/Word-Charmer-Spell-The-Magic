@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Resources/Themes/floating_text.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/PlayScene/DamageFloatingText.gd" type="Script" id=2]
+[ext_resource path="res://Resources/UI Elements/Buttons/Cartoon RPG UI_Game Icon - Coin.png" type="Texture" id=3]
+
+[node name="Control" type="Control"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.526
+anchor_top = 0.458
+anchor_right = 0.526
+anchor_bottom = 0.458
+margin_left = -51.6202
+margin_top = -30.3972
+margin_right = 51.3798
+margin_bottom = 30.6028
+custom_fonts/font = ExtResource( 1 )
+text = "+1000"
+valign = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Label"]
+
+[node name="Control_1" type="Control" parent="Label"]
+anchor_left = 0.537
+anchor_top = 0.439
+anchor_right = 0.537
+anchor_bottom = 0.439
+margin_left = -122.291
+margin_top = -27.7184
+margin_right = -82.2908
+margin_bottom = 12.2816
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coin_image" type="Sprite" parent="Label/Control_1"]
+visible = false
+position = Vector2( 33.5741, 33.2767 )
+scale = Vector2( 0.400862, 0.43 )
+texture = ExtResource( 3 )

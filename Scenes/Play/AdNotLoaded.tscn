@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_game_over_heading.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_inside_text.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/close_red.png" type="Texture" id=3]
+[ext_resource path="res://Resources/UI Elements/Window/window_big.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/PlayScene/AdNotLoaded.gd" type="Script" id=5]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/close_red.png" type="Texture" id=6]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 9
+
+[node name="AdNotLoaded" type="Control" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/AdNotLoaded"]
+anchor_left = 0.5
+anchor_top = 0.436
+anchor_right = 0.5
+anchor_bottom = 0.436
+margin_left = -187.583
+margin_top = -139.37
+margin_right = 1694.42
+margin_bottom = 1252.63
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="CanvasLayer/AdNotLoaded"]
+anchor_left = 0.5
+anchor_top = 0.431
+anchor_right = 0.5
+anchor_bottom = 0.431
+margin_left = -105.625
+margin_top = -128.195
+margin_right = 111.375
+margin_bottom = -88.195
+custom_fonts/font = ExtResource( 1 )
+text = "Watch Ad"
+
+[node name="Label2" type="Label" parent="CanvasLayer/AdNotLoaded"]
+anchor_left = 0.497
+anchor_top = 0.455
+anchor_right = 0.497
+anchor_bottom = 0.455
+margin_left = -122.928
+margin_top = -89.0
+margin_right = 123.072
+margin_bottom = 89.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "No ads currently available, please try again after some time"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="close" type="TextureButton" parent="CanvasLayer/AdNotLoaded"]
+anchor_left = 0.5
+anchor_top = 0.441
+anchor_right = 0.5
+anchor_bottom = 0.441
+margin_left = -176.831
+margin_top = 91.7819
+margin_right = 1.1687
+margin_bottom = 271.782
+rect_scale = Vector2( 0.35, 0.35 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 8
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.498039 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="CanvasLayer/AdNotLoaded/close" to="." method="_on_close_button_up"]

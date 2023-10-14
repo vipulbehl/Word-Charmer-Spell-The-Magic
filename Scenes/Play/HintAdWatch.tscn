@@ -1,0 +1,137 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_inside_text.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_game_over_heading.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/close_red.png" type="Texture" id=3]
+[ext_resource path="res://Resources/UI Elements/Window/big_border_window.png" type="Texture" id=4]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/close_red.png" type="Texture" id=5]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/video1_blue.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/PlayScene/HintAdWatch.gd" type="Script" id=7]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/video1_blue.png" type="Texture" id=8]
+
+[node name="Node2D" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 7 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 6
+
+[node name="AdWatchWindow" type="Control" parent="CanvasLayer"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -182.583
+margin_top = -107.498
+margin_right = 306.417
+margin_bottom = 170.502
+grow_horizontal = 2
+grow_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/AdWatchWindow"]
+anchor_left = 0.639
+anchor_top = 0.5
+anchor_right = 0.639
+anchor_bottom = 0.5
+margin_left = -346.105
+margin_top = -194.502
+margin_right = 373.895
+margin_bottom = 205.498
+rect_scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileDescription" type="Label" parent="CanvasLayer/AdWatchWindow"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -186.5
+margin_top = -115.0
+margin_right = 72.5
+margin_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Watch ad to find a word in the current grid"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WatchAd" type="TextureButton" parent="CanvasLayer/AdWatchWindow"]
+anchor_left = 0.366
+anchor_top = 0.272
+anchor_right = 0.366
+anchor_bottom = 0.272
+margin_left = 118.026
+margin_top = 48.384
+margin_right = 296.026
+margin_bottom = 228.384
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseButton" type="TextureButton" parent="CanvasLayer/AdWatchWindow"]
+anchor_left = 0.368
+anchor_top = 0.29
+anchor_right = 0.368
+anchor_bottom = 0.29
+margin_left = -184.153
+margin_top = 66.01
+margin_right = -6.15298
+margin_bottom = 246.01
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Heading" type="Label" parent="CanvasLayer/AdWatchWindow"]
+anchor_left = 0.393
+anchor_top = 0.217
+anchor_right = 0.393
+anchor_bottom = 0.217
+margin_left = -130.847
+margin_top = -108.465
+margin_right = 133.153
+margin_bottom = -68.4648
+custom_fonts/font = ExtResource( 2 )
+text = "Find a Word"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="BackgroundTint" type="ColorRect" parent="CanvasLayer2"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 2007.0
+margin_bottom = 969.0
+color = Color( 0, 0, 0, 0.47451 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="CanvasLayer/AdWatchWindow/WatchAd" to="." method="_on_WatchAd_button_up"]
+[connection signal="button_up" from="CanvasLayer/AdWatchWindow/CloseButton" to="." method="_on_CloseButton_button_up"]

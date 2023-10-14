@@ -1,0 +1,435 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/ok_green.png" type="Texture" id=1]
+[ext_resource path="res://Resources/UI Elements/Window/window_defeat.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_game_over_heading.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_inside_text.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Scripts/LevelScene/ChestUnlock.gd" type="Script" id=5]
+[ext_resource path="res://Resources/Sprites/Sounds/chest_unlock.wav" type="AudioStream" id=6]
+[ext_resource path="res://Resources/Sprites/Sounds/normal_button_click.wav" type="AudioStream" id=7]
+[ext_resource path="res://Resources/UI Elements/Buttons/Cartoon RPG UI_Game Icon - Coin.png" type="Texture" id=8]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/ok_green.png" type="Texture" id=9]
+
+[sub_resource type="Animation" id=1]
+resource_name = "unlock_chest"
+length = 1.8
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ false, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.560784 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 8
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+visible = false
+modulate = Color( 1, 1, 1, 0.560784 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -266.952
+margin_top = -177.328
+margin_right = 1067.05
+margin_bottom = 758.672
+rect_scale = Vector2( 0.45, 0.45 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -117.21
+margin_top = -154.579
+margin_right = 210.79
+margin_bottom = -114.579
+custom_fonts/font = ExtResource( 3 )
+text = "Chest Unlocked"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="okButton" type="TextureButton" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 204.054
+margin_top = 177.741
+margin_right = 468.054
+margin_bottom = 445.742
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChestUnlockAnimation" type="AnimationPlayer" parent="CanvasLayer/Control"]
+anims/unlock_chest = SubResource( 1 )
+
+[node name="ChestUnlockSound" type="AudioStreamPlayer" parent="CanvasLayer/Control"]
+stream = ExtResource( 6 )
+
+[node name="NormalButtonClick" type="AudioStreamPlayer" parent="CanvasLayer/Control"]
+stream = ExtResource( 7 )
+
+[node name="Control" type="Control" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -423.999
+margin_top = -286.919
+margin_right = -383.999
+margin_bottom = -246.919
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="row_1_sprite" type="Sprite" parent="CanvasLayer/Control/Control"]
+visible = false
+position = Vector2( 281.864, 217.887 )
+scale = Vector2( 0.243193, 0.232682 )
+texture = ExtResource( 8 )
+
+[node name="row_1_heading" type="Label" parent="CanvasLayer/Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -102.324
+margin_top = -78.0
+margin_right = -38.3245
+margin_bottom = -55.0
+custom_fonts/font = ExtResource( 4 )
+text = "Coins"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="row_1_count" type="Label" parent="CanvasLayer/Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 226.0
+margin_top = -78.0
+margin_right = 236.0
+margin_bottom = -55.0
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 4 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control2" type="Control" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -423.999
+margin_top = -242.919
+margin_right = -383.999
+margin_bottom = -202.919
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="row_2_sprite" type="Sprite" parent="CanvasLayer/Control/Control2"]
+visible = false
+position = Vector2( 281.864, 217.887 )
+scale = Vector2( 0.243193, 0.232682 )
+texture = ExtResource( 8 )
+
+[node name="row_2_heading" type="Label" parent="CanvasLayer/Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -102.324
+margin_top = -34.0
+margin_right = -38.3245
+margin_bottom = -11.0
+custom_fonts/font = ExtResource( 4 )
+text = "Coins"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="row_2_count" type="Label" parent="CanvasLayer/Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 226.0
+margin_top = -34.0
+margin_right = 236.0
+margin_bottom = -11.0
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 4 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control3" type="Control" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -423.999
+margin_top = -199.919
+margin_right = -383.999
+margin_bottom = -159.919
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="row_3_sprite" type="Sprite" parent="CanvasLayer/Control/Control3"]
+visible = false
+position = Vector2( 281.864, 217.887 )
+scale = Vector2( 0.243193, 0.232682 )
+texture = ExtResource( 8 )
+
+[node name="row_3_heading" type="Label" parent="CanvasLayer/Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -102.324
+margin_top = 9.0
+margin_right = -38.3245
+margin_bottom = 32.0
+custom_fonts/font = ExtResource( 4 )
+text = "Coins"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="row_3_count" type="Label" parent="CanvasLayer/Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 226.0
+margin_top = 9.0
+margin_right = 236.0
+margin_bottom = 32.0
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 4 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control4" type="Control" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -423.999
+margin_top = -242.919
+margin_right = -383.999
+margin_bottom = -202.919
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="row_4_sprite" type="Sprite" parent="CanvasLayer/Control/Control4"]
+visible = false
+position = Vector2( 281.864, 298.887 )
+scale = Vector2( 0.243193, 0.232682 )
+texture = ExtResource( 8 )
+
+[node name="row_4_heading" type="Label" parent="CanvasLayer/Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -102.324
+margin_top = 47.0
+margin_right = -38.3245
+margin_bottom = 70.0
+custom_fonts/font = ExtResource( 4 )
+text = "Coins"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="row_4_count" type="Label" parent="CanvasLayer/Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 226.0
+margin_top = 47.0
+margin_right = 236.0
+margin_bottom = 70.0
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 4 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control5" type="Control" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -423.999
+margin_top = -242.919
+margin_right = -383.999
+margin_bottom = -202.919
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="row_5_sprite" type="Sprite" parent="CanvasLayer/Control/Control5"]
+visible = false
+position = Vector2( 281.864, 336.887 )
+scale = Vector2( 0.243193, 0.232682 )
+texture = ExtResource( 8 )
+
+[node name="row_5_heading" type="Label" parent="CanvasLayer/Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -102.324
+margin_top = 85.0
+margin_right = -38.3245
+margin_bottom = 108.0
+custom_fonts/font = ExtResource( 4 )
+text = "Coins"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="row_5_count" type="Label" parent="CanvasLayer/Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 226.0
+margin_top = 85.0
+margin_right = 236.0
+margin_bottom = 108.0
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 4 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control6" type="Control" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -423.999
+margin_top = -242.919
+margin_right = -383.999
+margin_bottom = -202.919
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="row_6_sprite" type="Sprite" parent="CanvasLayer/Control/Control6"]
+visible = false
+position = Vector2( 281.864, 376.887 )
+scale = Vector2( 0.243193, 0.232682 )
+texture = ExtResource( 8 )
+
+[node name="row_6_heading" type="Label" parent="CanvasLayer/Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -102.324
+margin_top = 125.0
+margin_right = -38.3245
+margin_bottom = 148.0
+custom_fonts/font = ExtResource( 4 )
+text = "Coins"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="row_6_count" type="Label" parent="CanvasLayer/Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 226.0
+margin_top = 125.0
+margin_right = 236.0
+margin_bottom = 148.0
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 4 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 7
+
+[node name="BackgroundTint" type="ColorRect" parent="CanvasLayer2"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.619608 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="CanvasLayer/Control/okButton" to="." method="_on_okButton_button_up"]

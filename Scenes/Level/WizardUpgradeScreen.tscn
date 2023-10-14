@@ -1,0 +1,142 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_heading.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/UI Elements/Window/window_big.png" type="Texture" id=2]
+[ext_resource path="res://Resources/UI Elements/Window/window_big_separator.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Fonts/cloudy_store_potion_tile_heading.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_inside_text_1px_small.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/Upgrade.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/LevelScene/WizardUpgradeScreen.gd" type="Script" id=7]
+[ext_resource path="res://Resources/Sprites/Sounds/normal_button_click.wav" type="AudioStream" id=10]
+[ext_resource path="res://Resources/Sprites/Sounds/buy_upgrade_sound.wav" type="AudioStream" id=11]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/Upgrade.png" type="Texture" id=12]
+
+[node name="Control" type="Control"]
+anchor_right = 0.556
+anchor_bottom = 0.71
+margin_top = -1.0
+margin_right = -0.344055
+margin_bottom = -3.05176e-05
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+margin_right = 1882.0
+margin_bottom = 1392.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Heading" type="Label" parent="."]
+margin_left = 150.0
+margin_top = 21.0
+margin_right = 437.0
+margin_bottom = 52.0
+custom_fonts/font = ExtResource( 1 )
+text = "UPGRADE WIZARD"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 79.0
+margin_top = 66.0
+margin_right = 495.0
+margin_bottom = 201.0
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control1" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="window_big_separator" type="Sprite" parent="Control1"]
+position = Vector2( 280.907, 201.855 )
+scale = Vector2( 0.318889, 0.250672 )
+texture = ExtResource( 3 )
+
+[node name="StatHeading" type="Label" parent="."]
+margin_left = 96.0
+margin_top = 219.0
+margin_right = 463.0
+margin_bottom = 251.0
+grow_horizontal = 2
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Heal Potion"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatDescription" type="RichTextLabel" parent="."]
+margin_left = 103.0
+margin_top = 269.0
+margin_right = 462.0
+margin_bottom = 325.0
+custom_fonts/normal_font = ExtResource( 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Heals the health by[color=#0091FF] 150 HP[/color][/center]
+hello"
+text = "Heals the health by 150 HP
+hello"
+fit_content_height = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatUpgradeDescription" type="RichTextLabel" parent="."]
+margin_left = 103.0
+margin_top = 349.0
+margin_right = 462.0
+margin_bottom = 380.0
+rect_clip_content = false
+custom_fonts/normal_font = ExtResource( 5 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "Upgrade to 150 HP"
+text = "Upgrade to 150 HP"
+fit_content_height = true
+
+[node name="Control2" type="Control" parent="."]
+margin_top = 20.0
+margin_right = 40.0
+margin_bottom = 60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="window_big_separator2" type="Sprite" parent="Control2"]
+position = Vector2( 277.584, 308.409 )
+scale = Vector2( 0.163886, 0.206076 )
+texture = ExtResource( 3 )
+
+[node name="UpgradeButton" type="TextureButton" parent="."]
+margin_left = 456.238
+margin_top = 361.682
+margin_right = 720.238
+margin_bottom = 629.682
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NormalButtonClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="UpgradeSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[connection signal="button_up" from="UpgradeButton" to="." method="_on_UpgradeButton_button_up"]

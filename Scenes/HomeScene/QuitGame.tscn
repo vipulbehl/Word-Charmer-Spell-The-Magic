@@ -1,0 +1,115 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Resources/UI Elements/Window/window_defeat.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_game_over_heading.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_heading.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/close_red.png" type="Texture" id=4]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/close_red.png" type="Texture" id=5]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/ok_green.png" type="Texture" id=6]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/ok_green.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/HomeScene/QuitGame.gd" type="Script" id=8]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 11
+
+[node name="QuitGame" type="Control" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.05945
+margin_right = -1.05945
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/QuitGame"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -264.508
+margin_top = -225.487
+margin_right = 1069.49
+margin_bottom = 710.513
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/QuitGame"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -51.0
+margin_top = -206.0
+margin_right = 41.0
+margin_bottom = -166.0
+custom_fonts/font = ExtResource( 2 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CancelButton" type="TextureButton" parent="CanvasLayer/QuitGame"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -224.605
+margin_top = 92.2911
+margin_right = -46.6047
+margin_bottom = 272.291
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="TextureButton" parent="CanvasLayer/QuitGame"]
+anchor_left = 0.5
+anchor_top = 0.405
+anchor_right = 0.5
+anchor_bottom = 0.405
+margin_left = 120.285
+margin_top = 118.092
+margin_right = 384.285
+margin_bottom = 386.092
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+
+[node name="QuitGameLabel" type="Label" parent="CanvasLayer/QuitGame"]
+anchor_left = 0.501
+anchor_top = 0.418
+anchor_right = 0.501
+anchor_bottom = 0.418
+margin_left = -181.522
+margin_top = -72.7865
+margin_right = 182.478
+margin_bottom = 72.2135
+custom_fonts/font = ExtResource( 3 )
+text = "Want to Quit the Game?"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="BackgroundTint" type="ColorRect" parent="CanvasLayer2"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.552941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="CanvasLayer/QuitGame/CancelButton" to="." method="_on_CancelButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/QuitGame/QuitButton" to="." method="_on_QuitButton_button_up"]

@@ -1,0 +1,178 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_game_over_heading.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/UI Elements/Window/window_pause.png" type="Texture" id=2]
+[ext_resource path="res://Resources/UI Elements/Window/window_big_separator.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/PlayScene/Potions.gd" type="Script" id=4]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/close_red.png" type="Texture" id=5]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_heading.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_inside_text.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/close_red.png" type="Texture" id=8]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/ok_green.png" type="Texture" id=9]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/ok_green.png" type="Texture" id=10]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 6
+
+[node name="Potions" type="Control" parent="CanvasLayer"]
+pause_mode = 2
+visible = false
+anchor_left = 0.519
+anchor_top = 0.523
+anchor_right = 0.519
+anchor_bottom = 0.523
+margin_left = -531.81
+margin_top = -317.8
+margin_right = 492.19
+margin_bottom = 286.2
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuBackground" type="TextureRect" parent="CanvasLayer/Potions"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -257.82
+margin_top = -252.592
+margin_right = 1080.18
+margin_bottom = 927.408
+rect_scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PotionsHeading" type="Label" parent="CanvasLayer/Potions"]
+anchor_left = 0.519
+anchor_top = 0.5
+anchor_right = 0.519
+anchor_bottom = 0.5
+margin_left = -146.183
+margin_top = -239.227
+margin_right = 146.817
+margin_bottom = -178.227
+custom_fonts/font = ExtResource( 1 )
+text = "Magic Potions"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseButton" type="TextureButton" parent="CanvasLayer/Potions"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -222.654
+margin_top = 171.949
+margin_right = -44.6537
+margin_bottom = 351.949
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Potions"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -76.1361
+margin_top = -152.773
+margin_right = 87.8639
+margin_bottom = -18.7725
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="window_big_separator" type="Sprite" parent="CanvasLayer/Potions"]
+position = Vector2( 522.663, 318.889 )
+scale = Vector2( 0.282241, 0.364319 )
+texture = ExtResource( 3 )
+
+[node name="PotionHeading" type="Label" parent="CanvasLayer/Potions"]
+anchor_left = 0.507
+anchor_top = 0.414
+anchor_right = 0.507
+anchor_bottom = 0.414
+margin_left = -167.692
+margin_top = 96.0035
+margin_right = 181.308
+margin_bottom = 127.004
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Heal Potion"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PotionDescription" type="Label" parent="CanvasLayer/Potions"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -173.0
+margin_top = 88.2599
+margin_right = 194.0
+margin_bottom = 171.26
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "This potion will heal your health by 10HP"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Use" type="TextureButton" parent="CanvasLayer/Potions"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 145.927
+margin_top = 147.212
+margin_right = 409.927
+margin_bottom = 415.212
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PotionUseSound" type="AudioStreamPlayer" parent="CanvasLayer/Potions"]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="BackgroundTint" type="ColorRect" parent="CanvasLayer2"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -781.782
+margin_top = -493.028
+margin_right = 3180.22
+margin_bottom = 1655.97
+color = Color( 0, 0, 0, 0.560784 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="CanvasLayer/Potions/CloseButton" to="CanvasLayer/Potions" method="_on_CloseButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/Potions/Use" to="CanvasLayer/Potions" method="_on_Use_button_up"]

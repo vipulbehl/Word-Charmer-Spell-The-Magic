@@ -1,0 +1,163 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Resources/UI Elements/Buttons/Potion/HealthPotion.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/LevelScene/StoreButton.gd" type="Script" id=2]
+[ext_resource path="res://Resources/UI Elements/Buttons/Select_Box.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Fonts/cloudy_item_price.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Resources/UI Elements/Buttons/Cartoon RPG UI_Game Icon - Coin.png" type="Texture" id=5]
+[ext_resource path="res://Resources/Fonts/cloudy_potion_count.tres" type="DynamicFont" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "SelectedAnim"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.139288, 0.121668 ), Vector2( 0.149, 0.132 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "SmallSelectedAnim"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.098, 0.082 ), Vector2( 0.108, 0.092 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "SmallSelectedAnim"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.126729, 0.0898596 ), Vector2( 0.137, 0.1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_fonts/font:size")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 16, 50, 16 ]
+}
+
+[node name="CenterContainer" type="CenterContainer" groups=[
+"deselect",
+]]
+anchor_right = 0.078
+anchor_bottom = 0.143
+margin_right = 0.127998
+margin_bottom = 0.199997
+rect_min_size = Vector2( 80, 80 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="TextureButton" parent="."]
+show_behind_parent = true
+margin_left = 15.0
+margin_top = 18.0
+margin_right = 65.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 50, 50 )
+texture_normal = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 41.8221, 53.1741 )
+scale = Vector2( 0.149, 0.132 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
+anims/SelectedAnim = SubResource( 1 )
+
+[node name="SmallAnimation" type="Sprite" parent="."]
+visible = false
+position = Vector2( 39.8526, 40.3351 )
+scale = Vector2( 0.098, 0.082 )
+texture = ExtResource( 3 )
+
+[node name="SmallAnimationPlayer" type="AnimationPlayer" parent="SmallAnimation"]
+anims/SmallSelectedAnim = SubResource( 2 )
+
+[node name="SmallAnimationNum" type="Sprite" parent="."]
+visible = false
+position = Vector2( 51.578, 41.0173 )
+scale = Vector2( 0.137, 0.1 )
+texture = ExtResource( 3 )
+
+[node name="SmallAnimationPlayerNum" type="AnimationPlayer" parent="SmallAnimationNum"]
+anims/SmallSelectedAnim = SubResource( 3 )
+
+[node name="CoinImage" type="Sprite" parent="."]
+position = Vector2( 24.1237, 79.0413 )
+scale = Vector2( 0.0998607, 0.111705 )
+texture = ExtResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+
+[node name="PriceLabel" type="Label" parent="Sprite2"]
+margin_left = 35.0
+margin_top = 72.0
+margin_right = 45.0
+margin_bottom = 88.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite3" type="Sprite" parent="."]
+
+[node name="Count" type="Label" parent="Sprite3"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 58.0
+margin_top = 52.0
+margin_right = 82.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "x20"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountUpdateAnimation" type="AnimationPlayer" parent="Sprite3/Count"]
+anims/UpdateCount = SubResource( 4 )

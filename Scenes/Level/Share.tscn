@@ -1,0 +1,161 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Resources/UI Elements/Window/window_defeat.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_game_over_heading.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scripts/LevelScene/Share.gd" type="Script" id=3]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/close_red.png" type="Texture" id=4]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/close_red.png" type="Texture" id=5]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_inside_text.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/Twitter_button.png" type="Texture" id=7]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/share_yellow.png" type="Texture" id=8]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/share_yellow.png" type="Texture" id=9]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/fb_button.png" type="Texture" id=10]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/Twitter_button.png" type="Texture" id=11]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/fb_button.png" type="Texture" id=12]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 9
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.05945
+margin_right = -1.05945
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -264.508
+margin_top = -225.487
+margin_right = 1069.49
+margin_bottom = 710.513
+rect_scale = Vector2( 0.4, 0.45 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -65.0182
+margin_top = -206.443
+margin_right = 58.9818
+margin_bottom = -166.443
+custom_fonts/font = ExtResource( 2 )
+text = "Share"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="CanvasLayer/Control"]
+anchor_left = 0.498
+anchor_top = 0.5
+anchor_right = 0.498
+anchor_bottom = 0.5
+margin_left = -126.714
+margin_top = -111.811
+margin_right = 141.286
+margin_bottom = 41.1893
+custom_fonts/font = ExtResource( 6 )
+text = "Liked the Game?
+
+Share it with your friends and get 5000 coins. FB and Twitter give extra coins."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShareButton" type="TextureButton" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -40.5739
+margin_top = 73.7047
+margin_right = 137.426
+margin_bottom = 253.705
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CancelButton" type="TextureButton" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -230.598
+margin_top = 140.237
+margin_right = -52.598
+margin_bottom = 320.237
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FacebookShare" type="TextureButton" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 75.9731
+margin_top = 82.3568
+margin_right = 253.973
+margin_bottom = 262.357
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TwitterShare" type="TextureButton" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -139.389
+margin_top = 82.3568
+margin_right = 38.6112
+margin_bottom = 262.357
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 8
+
+[node name="BackgroundTint" type="ColorRect" parent="CanvasLayer2"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.552941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="CanvasLayer/Control/ShareButton" to="." method="_on_ShareButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/Control/CancelButton" to="." method="_on_CancelButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/Control/FacebookShare" to="." method="_on_FacebookShare_button_up"]
+[connection signal="button_up" from="CanvasLayer/Control/TwitterShare" to="." method="_on_TwitterShare_button_up"]

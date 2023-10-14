@@ -1,0 +1,412 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/PlayScene/Stats.gd" type="Script" id=1]
+[ext_resource path="res://Resources/UI Elements/Window/window_pause.png" type="Texture" id=2]
+[ext_resource path="res://Resources/UI Elements/Buttons/Cartoon RPG UI_Game Icon - Attack.png" type="Texture" id=3]
+[ext_resource path="res://Resources/UI Elements/Buttons/Cartoon RPG UI_Game Icon - Defense.png" type="Texture" id=4]
+[ext_resource path="res://Resources/UI Elements/Buttons/Cartoon RPG UI_Game Icon - Life.png" type="Texture" id=5]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/close_red.png" type="Texture" id=6]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_heading.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_inside_text.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Resources/UI Elements/Window/window_big_separator.png" type="Texture" id=9]
+[ext_resource path="res://Resources/UI Elements/Buttons/Stats/CriticalHit2.png" type="Texture" id=10]
+[ext_resource path="res://Resources/UI Elements/Buttons/Stats/Dodge1.png" type="Texture" id=11]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/close_red.png" type="Texture" id=12]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 6
+
+[node name="PlayerStats" type="Control" parent="CanvasLayer"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -192.0
+margin_top = -181.0
+margin_right = 1146.0
+margin_bottom = 999.0
+rect_scale = Vector2( 0.35, 0.3 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatsHeading" type="Label" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.554
+anchor_top = 0.24
+anchor_right = 0.554
+anchor_bottom = 0.24
+margin_left = -102.296
+margin_top = -15.0
+margin_right = 101.704
+margin_bottom = 16.0
+custom_fonts/font = ExtResource( 7 )
+text = "Enemy Stats	"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OkButton" type="TextureButton" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.539
+anchor_top = 0.5
+anchor_right = 0.539
+anchor_bottom = 0.5
+margin_left = -199.936
+margin_top = 132.0
+margin_right = -21.936
+margin_bottom = 312.0
+rect_scale = Vector2( 0.35, 0.35 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthImage" type="TextureRect" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -119.0
+margin_top = -104.0
+margin_right = -79.0
+margin_bottom = -64.0
+rect_min_size = Vector2( 40, 40 )
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Health" type="Label" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.465
+anchor_top = 0.5
+anchor_right = 0.465
+anchor_bottom = 0.5
+margin_left = -23.16
+margin_top = -98.0
+margin_right = 53.84
+margin_bottom = -64.0
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Health"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthVal" type="Label" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 185.0
+margin_top = -98.0
+margin_right = 203.0
+margin_bottom = -64.0
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AttackImage" type="TextureRect" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -118.0
+margin_top = -57.0
+margin_right = -78.0
+margin_bottom = -17.0
+rect_min_size = Vector2( 40, 40 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Attack" type="Label" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.469
+anchor_top = 0.458
+anchor_right = 0.469
+anchor_bottom = 0.458
+margin_left = -28.256
+margin_top = -24.8
+margin_right = 54.744
+margin_bottom = 9.20007
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Attack"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AttackVal" type="Label" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.477
+anchor_top = 0.5
+anchor_right = 0.477
+anchor_bottom = 0.5
+margin_left = 207.552
+margin_top = -50.0
+margin_right = 225.552
+margin_bottom = -16.0
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DefenseImage" type="TextureRect" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.477
+anchor_top = 0.547
+anchor_right = 0.477
+anchor_bottom = 0.547
+margin_left = -93.448
+margin_top = -34.2
+margin_right = -53.448
+margin_bottom = 5.80002
+rect_min_size = Vector2( 40, 40 )
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Defense" type="Label" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.477
+anchor_top = 0.52
+anchor_right = 0.477
+anchor_bottom = 0.52
+margin_left = -36.448
+margin_top = -14.0
+margin_right = 61.552
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Defense"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DefenseVal" type="Label" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.477
+anchor_top = 0.531
+anchor_right = 0.477
+anchor_bottom = 0.531
+margin_left = 206.552
+margin_top = -20.6
+margin_right = 224.552
+margin_bottom = 13.4
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CriticalHitImage" type="TextureRect" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.484
+anchor_top = 0.533
+anchor_right = 0.484
+anchor_bottom = 0.533
+margin_left = -97.616
+margin_top = 23.2
+margin_right = -57.616
+margin_bottom = 63.2
+rect_min_size = Vector2( 40, 40 )
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CriticalHit" type="Label" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.469
+anchor_top = 0.547
+anchor_right = 0.469
+anchor_bottom = 0.547
+margin_left = -32.256
+margin_top = 23.8
+margin_right = 162.744
+margin_bottom = 46.8
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Critical Hit %"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CriticalHitVal" type="Label" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.484
+anchor_top = 0.547
+anchor_right = 0.484
+anchor_bottom = 0.547
+margin_left = 200.384
+margin_top = 17.8
+margin_right = 218.384
+margin_bottom = 51.8
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DodgeImage" type="TextureRect" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.484
+anchor_top = 0.533
+anchor_right = 0.484
+anchor_bottom = 0.533
+margin_left = -94.616
+margin_top = 70.2
+margin_right = -54.616
+margin_bottom = 110.2
+rect_min_size = Vector2( 40, 40 )
+texture = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dodge" type="Label" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.477
+anchor_top = 0.533
+anchor_right = 0.477
+anchor_bottom = 0.533
+margin_left = -38.448
+margin_top = 77.2
+margin_right = 83.552
+margin_bottom = 100.2
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Dodge %"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DodgeVal" type="Label" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.484
+anchor_top = 0.547
+anchor_right = 0.484
+anchor_bottom = 0.547
+margin_left = 199.384
+margin_top = 65.8
+margin_right = 217.384
+margin_bottom = 99.8
+grow_horizontal = 0
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.536
+anchor_top = 0.5
+anchor_right = 0.536
+anchor_bottom = 0.5
+margin_left = -528.864
+margin_top = -275.0
+margin_right = -508.864
+margin_bottom = -260.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="window_big_separator" type="Sprite" parent="CanvasLayer/PlayerStats/Control"]
+position = Vector2( 540, 215 )
+scale = Vector2( 0.270726, 0.175 )
+texture = ExtResource( 9 )
+
+[node name="Control2" type="Control" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.535
+anchor_top = 0.5
+anchor_right = 0.535
+anchor_bottom = 0.5
+margin_left = -547.84
+margin_top = -300.0
+margin_right = -507.84
+margin_bottom = -260.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="window_big_separator2" type="Sprite" parent="CanvasLayer/PlayerStats/Control2"]
+position = Vector2( 553.483, 287 )
+scale = Vector2( 0.259586, 0.175 )
+texture = ExtResource( 9 )
+
+[node name="Control3" type="Control" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.547
+anchor_top = 0.5
+anchor_right = 0.547
+anchor_bottom = 0.5
+margin_left = -560.128
+margin_top = -300.0
+margin_right = -520.128
+margin_bottom = -260.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="window_big_separator3" type="Sprite" parent="CanvasLayer/PlayerStats/Control3"]
+position = Vector2( 552.222, 338 )
+scale = Vector2( 0.25743, 0.175 )
+texture = ExtResource( 9 )
+
+[node name="Control4" type="Control" parent="CanvasLayer/PlayerStats"]
+anchor_left = 0.543
+anchor_top = 0.5
+anchor_right = 0.543
+anchor_bottom = 0.5
+margin_left = -556.032
+margin_top = -300.0
+margin_right = -516.032
+margin_bottom = -260.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="window_big_separator4" type="Sprite" parent="CanvasLayer/PlayerStats/Control4"]
+position = Vector2( 551.801, 387 )
+scale = Vector2( 0.256711, 0.175 )
+texture = ExtResource( 9 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="BackgroundTint" type="ColorRect" parent="CanvasLayer2"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1157.0
+margin_top = -870.0
+margin_right = 3182.0
+margin_bottom = 1667.0
+color = Color( 0, 0, 0, 0.560784 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="CanvasLayer/PlayerStats/OkButton" to="CanvasLayer/PlayerStats" method="_on_OkButton_button_up"]

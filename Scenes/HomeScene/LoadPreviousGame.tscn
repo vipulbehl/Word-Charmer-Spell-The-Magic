@@ -1,0 +1,227 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Resources/Sprites/Background/menu.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/HomeScene/LoadPreviousGame.gd" type="Script" id=2]
+[ext_resource path="res://Resources/UI Elements/GameName/Charmer Final Image.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Fonts/cloudy_home_screen_headings.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Resources/UI Elements/Window/button_text_background.png" type="Texture" id=5]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/play_green.png" type="Texture" id=6]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/play_green.png" type="Texture" id=7]
+[ext_resource path="res://Resources/UI Elements/Buttons/BeforeClick/load_data_orange.png" type="Texture" id=8]
+[ext_resource path="res://Resources/UI Elements/Buttons/Clicked/load_data_small_orange.png" type="Texture" id=9]
+[ext_resource path="res://Resources/Vector Parts/Wizard_SCML/wizard_ice_cs4_11.png" type="Texture" id=10]
+[ext_resource path="res://Resources/UI Elements/GameName/Spell the magic Final Image.png" type="Texture" id=11]
+[ext_resource path="res://Resources/UI Elements/GameName/Word Final Image.png" type="Texture" id=12]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 11
+
+[node name="LoadPreviousGame" type="Control" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.05945
+margin_right = -1.05945
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadGameLabel" type="Label" parent="CanvasLayer/LoadPreviousGame"]
+anchor_left = 0.5
+anchor_top = 0.499
+anchor_right = 0.5
+anchor_bottom = 0.499
+margin_left = -83.799
+margin_top = 8.11783
+margin_right = 209.201
+margin_bottom = 59.1179
+custom_fonts/font = ExtResource( 4 )
+text = "LOAD GAME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/LoadPreviousGame"]
+anchor_right = 2.00195
+anchor_bottom = 2.56
+margin_left = -1.19209e-07
+margin_right = 1.0
+rect_scale = Vector2( 0.5, 0.4 )
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewGameTexture" type="TextureButton" parent="CanvasLayer/LoadPreviousGame"]
+anchor_left = 0.5
+anchor_top = 0.492
+anchor_right = 0.5
+anchor_bottom = 0.492
+margin_left = -196.484
+margin_top = -3.17126
+margin_right = 403.516
+margin_bottom = 156.828
+rect_scale = Vector2( 0.63, 0.4 )
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewGameButton" type="TextureButton" parent="CanvasLayer/LoadPreviousGame"]
+anchor_left = 0.5
+anchor_top = 0.491
+anchor_right = 0.5
+anchor_bottom = 0.491
+margin_left = -220.412
+margin_top = -20.695
+margin_right = 1058.59
+margin_bottom = 247.305
+rect_scale = Vector2( 0.35, 0.35 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewGameLabel" type="Label" parent="CanvasLayer/LoadPreviousGame"]
+anchor_left = 0.5
+anchor_top = 0.499
+anchor_right = 0.5
+anchor_bottom = 0.499
+margin_left = -112.799
+margin_top = 3.11777
+margin_right = 180.201
+margin_bottom = 54.1178
+custom_fonts/font = ExtResource( 4 )
+text = "NEW GAME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadGameTexture" type="TextureButton" parent="CanvasLayer/LoadPreviousGame"]
+anchor_left = 0.5
+anchor_top = 0.681
+anchor_right = 0.5
+anchor_bottom = 0.681
+margin_left = -192.246
+margin_top = -10.6
+margin_right = 436.754
+margin_bottom = 162.4
+rect_scale = Vector2( 0.63, 0.4 )
+texture_normal = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadGameButton" type="TextureButton" parent="CanvasLayer/LoadPreviousGame"]
+anchor_left = 0.5
+anchor_top = 0.491
+anchor_right = 0.5
+anchor_bottom = 0.491
+margin_left = -217.0
+margin_top = 86.4
+margin_right = 683.0
+margin_bottom = 266.4
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadGameLabel2" type="Label" parent="CanvasLayer/LoadPreviousGame"]
+anchor_left = 0.5
+anchor_top = 0.683
+anchor_right = 0.5
+anchor_bottom = 0.683
+margin_left = -115.0
+margin_top = -0.800018
+margin_right = 212.0
+margin_bottom = 43.2
+custom_fonts/font = ExtResource( 4 )
+text = "LOAD GAME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WordImage" type="TextureRect" parent="CanvasLayer/LoadPreviousGame"]
+anchor_left = 0.489
+anchor_top = 0.093
+anchor_right = 0.489
+anchor_bottom = 0.093
+margin_left = -137.427
+margin_top = -21.8546
+margin_right = 1236.57
+margin_bottom = 461.145
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharmerImage" type="TextureRect" parent="CanvasLayer/LoadPreviousGame"]
+anchor_left = 0.497
+anchor_top = 0.102
+anchor_right = 0.497
+anchor_bottom = 0.102
+margin_left = -248.299
+margin_top = 61.6007
+margin_right = 2352.7
+margin_bottom = 602.601
+rect_scale = Vector2( 0.19, 0.19 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpellTheMagicImage" type="TextureRect" parent="CanvasLayer/LoadPreviousGame"]
+anchor_left = 0.5
+anchor_top = 0.138
+anchor_right = 0.5
+anchor_bottom = 0.138
+margin_left = 144.747
+margin_top = -0.0399475
+margin_right = 1890.75
+margin_bottom = 331.96
+rect_scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HatImage" type="TextureRect" parent="CanvasLayer/LoadPreviousGame"]
+anchor_left = 0.504
+anchor_top = 0.133
+anchor_right = 0.504
+anchor_bottom = 0.133
+margin_left = -301.706
+margin_top = 36.9361
+margin_right = -23.7057
+margin_bottom = 264.936
+rect_rotation = -33.6
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="BackgroundTint" type="ColorRect" parent="CanvasLayer2"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.552941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="CanvasLayer/LoadPreviousGame/NewGameTexture" to="." method="_on_NewGameTexture_button_up"]
+[connection signal="button_up" from="CanvasLayer/LoadPreviousGame/NewGameButton" to="." method="_on_NewGameButton_button_up"]
+[connection signal="button_up" from="CanvasLayer/LoadPreviousGame/LoadGameTexture" to="." method="_on_LoadGameTexture_button_up"]
+[connection signal="button_up" from="CanvasLayer/LoadPreviousGame/LoadGameButton" to="." method="_on_LoadGameButton_button_up"]

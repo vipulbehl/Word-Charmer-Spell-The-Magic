@@ -1,0 +1,146 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Resources/UI Elements/Progress Bar/Cartoon RPG UI_Loading Bar - Background.png" type="Texture" id=1]
+[ext_resource path="res://Resources/UI Elements/Progress Bar/Cartoon RPG UI_Loading Bar - Fill.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Sprites/Background/menu.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Fonts/cloudy_dialog_inside_text.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Scripts/LoadingBar.gd" type="Script" id=5]
+[ext_resource path="res://Resources/UI Elements/GameName/Spell the magic Final Image.png" type="Texture" id=6]
+[ext_resource path="res://Resources/UI Elements/GameName/Charmer Final Image.png" type="Texture" id=7]
+[ext_resource path="res://Resources/UI Elements/GameName/Word Final Image.png" type="Texture" id=8]
+[ext_resource path="res://Resources/Vector Parts/Wizard_SCML/wizard_ice_cs4_11.png" type="Texture" id=9]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 2.00195
+anchor_bottom = 2.56
+margin_left = -1.0
+rect_scale = Vector2( 0.5, 0.4 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ProgressBar" type="TextureProgress" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -441.126
+margin_top = 201.437
+margin_right = 1358.87
+margin_bottom = 329.437
+rect_scale = Vector2( 0.5, 0.5 )
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label1" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -411.145
+margin_top = 222.164
+margin_right = 434.855
+margin_bottom = 248.164
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 4 )
+text = "100%"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tip" type="Label" parent="."]
+anchor_left = 0.506
+anchor_top = 0.5
+anchor_right = 0.506
+anchor_bottom = 0.5
+margin_left = -409.144
+margin_top = 113.0
+margin_right = 408.856
+margin_bottom = 196.0
+custom_fonts/font = ExtResource( 4 )
+text = "Tip : Endless mode unlocks at level 10. Play it to get more coins"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="WordImage" type="TextureRect" parent="."]
+anchor_left = 0.489
+anchor_top = 0.093
+anchor_right = 0.489
+anchor_bottom = 0.093
+margin_left = -137.427
+margin_top = -21.8546
+margin_right = 1236.57
+margin_bottom = 461.145
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharmerImage" type="TextureRect" parent="."]
+anchor_left = 0.497
+anchor_top = 0.102
+anchor_right = 0.497
+anchor_bottom = 0.102
+margin_left = -248.299
+margin_top = 61.6007
+margin_right = 2352.7
+margin_bottom = 602.601
+rect_scale = Vector2( 0.19, 0.19 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpellTheMagicImage" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.138
+anchor_right = 0.5
+anchor_bottom = 0.138
+margin_left = 144.747
+margin_top = -0.0399475
+margin_right = 1890.75
+margin_bottom = 331.96
+rect_scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HatImage" type="TextureRect" parent="."]
+anchor_left = 0.504
+anchor_top = 0.133
+anchor_right = 0.504
+anchor_bottom = 0.133
+margin_left = -301.706
+margin_top = 36.9361
+margin_right = -23.7057
+margin_bottom = 264.936
+rect_rotation = -33.6
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
