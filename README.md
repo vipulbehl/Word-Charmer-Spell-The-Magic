@@ -22,5 +22,5 @@ You must have the following softwares installed for the project to work
 - Enable custom android build (required for Google Play Integration & Admob) by following [Godot Tutorial](https://docs.godotengine.org/en/stable/tutorials/export/android_custom_build.html)https://docs.godotengine.org/en/stable/tutorials/export/android_custom_build.html
 
 ## Libraries Used
-- [Admob Plugin](https://github.com/godotengine/godot-google-play-billing)https://github.com/godotengine/godot-google-play-billing
-- [Google Play Billing](https://github.com/godotengine/godot-google-play-billing)https://github.com/godotengine/godot-google-play-billing
+- [Admob Plugin](https://github.com/godotengine/godot-google-play-billing)
+- [Google Play Billing](https://github.com/godotengine/godot-google-play-billing)
