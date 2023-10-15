@@ -4,7 +4,7 @@
 Word Charmer: Spell The Magic is an exciting combination of word and adventure game, where you make words to cast powerful spells. This game is made with [Godot Engine](https://github.com/godotengine/godot) and is freely available to play on [Google Play Store](https://play.google.com/store/apps/details?id=com.bluemoongames.wordcharmer)
 
 ## Gameplay
-https://github.com/vipulbehl/Word-Charmer-Spell-The-Magic/assets/10697185/e36645e6-f2b9-4ec1-9716-370270e8a810
+https://github.com/vipulbehl/Word-Charmer-Spell-The-Magic/assets/10697185/0e5084db-46bb-4998-92af-a89ce230f919
 
 ## Building the Project
 ### Prerequisite
