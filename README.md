@@ -19,7 +19,7 @@ You must have the following softwares installed for the project to work
 ### Importing the Project
 - Open the project in Godot
 - Enable the plugins (NativeLib & Import SCML) from Project -> Plugins
-- Enable custom android build (required for Google Play Integration & Admob) by following [Godot Tutorial](https://docs.godotengine.org/en/stable/tutorials/export/android_custom_build.html)https://docs.godotengine.org/en/stable/tutorials/export/android_custom_build.html
+- Enable custom android build (required for Google Play Integration & Admob) by following [Godot Tutorial](https://docs.godotengine.org/en/stable/tutorials/export/android_custom_build.html)
 
 ## Libraries Used
 - [Admob Plugin](https://github.com/godotengine/godot-google-play-billing)
